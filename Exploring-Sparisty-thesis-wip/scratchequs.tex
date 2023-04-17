@@ -1,0 +1,24 @@
+\documentclass[letterpaper, 12pt]{article}
+\usepackage{MarksDefaults}
+\usepackage{subfiles}
+\usepackage{blkarray}
+\usepackage{hhline}
+\newcommand{\bigzero}{\mbox{\normalfont\Large\bfseries 0}}
+\newcommand{\PT}{\text{(PT)}}
+\newcommand{\CC}{\text{(CC)}}
+
+\usepackage{cleveref}
+
+
+\begin{document}
+\begin{align*}
+E&= a+b \ln(1+\gamma x)\\
+x \rightarrow 0,\quad E &= a
+\end{align*}
+
+\begin{align*}
+E_{last} - E_{corr}&= a+b \ln(1+\gamma x)\\
+x \rightarrow 0, \quad E_{corr} &= a - E_{last}\\
+E_{corr} =  E^{CC}_{last} - a- B ln(1+\gamma x)
+\end{align*}
+\end{document}

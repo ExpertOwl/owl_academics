@@ -1,0 +1,60 @@
+%Preamble. You need all of this
+%Document settings
+\documentclass[letterpaper, 12pt]{article}
+\usepackage[margin=1in]{geometry}
+\linespread{1.45}
+%Package for physics/math/chem/SI unit notation
+\usepackage{physics,braket,amsthm,amsmath,amssymb,mathtools,mhchem,bm,siunitx}
+%Packages for plotting data and making diagrams, figure placement
+\usepackage{pgfplots,subfloat,float}
+%Misc packages for formatting
+\usepackage{multirow,cancel,nomencl} % for tables
+
+\renewcommand{\nomname}{List of Abbreviations}
+
+\makenomenclature
+%\nomenclature{CLO}{Congruent localized orbital}
+%\nomenclature{<Abreviation>}{<Full name/description>}
+%=======================================================
+
+\newcommand{\adag}{a^{\dagger}} %Command for creation operator
+\newcommand{\matr}[1]{\bm{#1}} % undergraduate algebra version
+\newcommand{\secref[1]}{\S \ref{#1}}
+%%%%%%%%%Variable Declarations%%%%%%%%%%%%
+\DeclareMathOperator\erfc{erfc}
+
+\begin{document}
+
+The Goal is to obtain accurate (CC (t), S, G) amplitudes (matrix elements) from moderate size calculations performed on a localized orbital subspace, akin to cluster-in-molecule. We will systematically expand our subspace to justify our use of an extrapolation scheme. Candidates for extrapolation include ground state energies as well as IP/EA-EOM and (possibly) STEOM excited states. Direct extrapolation on matrix elements is the ultimate goal. \\
+
+Aside: Need to flesh out these sections and concepts as a preamble to the Math below. For now I am writing in terms of energies and t-amplitudes, but this will change as we want matrix elements. Sections of this may be moved to a MP2/CC section. Care must be taken in notation, especially in differentiating between values calculated form CC and perturbation theory. \\
+
+One can obtain low-order approximations to the coupled cluster t-amplitudes from an MP2 correction on a hartree-fock reference state. As the potential is a two-body operator, contributions from singly excited states vanish (can show math in supplementary? Or this might in S\&O). Similarly, contributions from triple and higher excitations with respect to the reference vanish due to Slater's rules (definitely in S\&O). First order approximations to the $T_2$ amplitudes (denoted $t(PT)$) are analytically available from eigenvalues of Hartree-fock spin-orbitals ($\epsilon$) and 2 electron integrals. We use $i,j,k,l...$ and $a,b,c,d ...$  to denote occupied and virtual orbitals, respectively. 
+
+\begin{align*}
+t^{ab}_{ij}(PT) &= 
+\frac{
+	\bra{\Psi^{ab}_{ij}} V \ket{\Psi_{HF}}}
+	{\epsilon_i + \epsilon_j - \epsilon_a - \epsilon_b}	\\
+&= \frac{
+	\braket{ab||ij}}
+	{\epsilon_i + \epsilon_j - \epsilon_a - \epsilon_b}	
+\end{align*}
+Second-order approximations to $T_1$ amplitudes can be calculated using residuals of $T_2$ approximations (I think this is incorrect, I am not sure what the residuals are of), $R_{ai}$
+\begin{align*}
+&&t_i^a(PT)= \frac{R_{ai}}{\epsilon_i - \epsilon_a}\\
+&&R_{ai} =f_{ai} &+ \sum_{c,d,l} t_{il}^{cd}(PT) \bigg[2 \braket{cd|al} - \braket{dc|al} \bigg] \\ &&& - \sum_{k,l,d} t_{kl}^{ad}(PT) \bigg[2 \braket{kl|id} - \braket{lk|id} \bigg]
+\end{align*} 
+We can now obtain a low level approximation to the true ground state energy.
+\begin{align*}
+E(L) = \sum f^a_{i} t_i^a(PT) + \bigg(2 \braket{ab|ij} - \braket{ba|ij}\bigg)\bigg(t^{ab}_{ij} +   t_i^a(PT)  t_j^b(PT)\bigg)
+\end{align*}
+In order to justify our use of an extrapolation procedure, we must systematically approach a full calculation. We will carve out a subspace in which we solve the CC equations. In the limit of the subspace being equal to the full active space, we will have canonical CC solution (Can I use canonical there? Need to look up. likely a better word). As we have the freedom to chose our subspace, we can chose it to be localized. This allows us to base our orbital selection on localization schemes which have shown to be reliable while maintaining low-order  computational complexity.
+
+Using low-accuracy t-amplitudes, we generate the occupied-occupied and virtual-virtual blocks of the one body (is this a one body quantity?) density matrix.
+\begin{align*}
+D_{ij} &= \delta_{ij} + \sum_c t_i^c(PT) t_j^c(PT) + \sum_{c,d,l} s_{jl}^{cd}\bigg(2 t_{il}^{cd}(PT) - t_{il}^{dc}(PT)\bigg)\\
+D_{ab} &= \delta_{ab} 0 \sum_k t_k^a(PT) t_k^b(PT) + \sum_{d,k,l} s_{lk}^{bd}\bigg(2 t_{ad}^{cd}(PT) - t_{lk}^{ad}(PT)\bigg)
+\end{align*}
+Diagonalization of these blocks gives natural occupation numbers and orbital coefficients for  
+\end{document}

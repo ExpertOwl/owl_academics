@@ -1,0 +1,32 @@
+The central idea is to perform highly accurate calculations in a truncated Fock space to achieve accuracy comparable to canonical CC while using less resources.  Should this scheme show promise, it can be integrated for use in DLPNO/CIM type methods. For a given reference, natural orbital occupation numbers are obtained from the one body density matrix and are used to discard orbitals with low NO occupation. First approximations of the t-amplitudes are calculated using perturbation theory. T-amplitudes completely within the truncated space are later replaced by their CC counterparts. The canonical CC equations are solved using the mixed-accuracy t-amplitudes. Once the these t-amplitudes are obtained, any existing CC code (eg. CCSDTQ) can be used with only a modest development overhead. Below, the math is outlined in detail. \\\\
+One can obtain low-order approximations to the coupled cluster t-amplitudes from an MP2 correction on a Hartree-Fock reference state. As the potential is a two-body operator, contributions from singly excited states vanish. Similarly, contributions from triple and higher excitations with respect to the reference vanish due to Slater's rules (REF S\&O). PT approximations to the t-amplitudes, denoted $t\PT$, are analytically available following a HF reference. Let $i,j,k,l...$ and $a,b,c,d ...$ denote occupied and virtual orbitals, respectively, and let  $p,q,r,s...$ be general orbitals, then  
+\begin{align}
+T_2: t_{ij}^{ab}\PT&= \frac{
+	\braket{ab|ij}}
+	{\epsilon_i + \epsilon_j - \epsilon_a - \epsilon_b}	\\
+T_1:t_i^a\PT&= \frac{R_{ai}}{\epsilon_i - \epsilon_a}
+\end{align}
+Where $R_{ai}$ (not to be confused with the $R_K$ from EOM) is the CC residual: 
+\begin{align}
+\begin{split}
+R_{ai} =f_{ai} &+ \sum_{c,d,l} t_{il}^{cd}(PT) \bigg[2 \braket{al|cd} - \braket{al|dc} \bigg] \\ & - \sum_{k,l,d} t_{kl}^{ad}(PT) \bigg[2 \braket{id|kl} - \braket{id|lk} \bigg]
+\end{split}
+\end{align}
+Using the low-accuracy t-amplitudes, we generate the occupied-occupied and virtual-virtual blocks of the one-body density matrix.
+\begin{align}
+D_{ij} &= \delta_{ij} + \sum_c t_i^c\PT t_j^c\PT + \sum_{c,d,l} t_{jl}^{cd}\PT \bigg(2 \, t_{il}^{cd}\PT - t_{il}^{dc}\PT\bigg)\label{eq:D_occ_occ}\\
+D_{ab} &= \delta_{ab} - \sum_k t_k^a\PT t_k^b\PT - \sum_{d,k,l} t_{lk}^{bd}\PT \bigg(2 \, t_{ad}^{cd}\PT - t_{lk}^{ad}\PT\bigg)\label{eq:D_vrt_vrt}
+\end{align} 
+Eigenvalues of (\ref{eq:D_occ_occ}) and (\ref{eq:D_vrt_vrt}) are natural-orbital occupation numbers, $n_k$ and $n_a$. \\\\ 
+To truncate the Fock-space, we choose a numeric threshold $\eta$ and discard natural orbitals with $n_p < \eta$. Solving the CC equations within the truncated NO space yields a set of 'mixed-accuracy' t-amplitudes:
+\begin{align}
+t_{pq...} &= \begin{cases}
+	t_{pq...} \PT, & \text{if at least one } \{p, q,...\} \text{ is discarded}  \\
+	t_{pq...} \CC, & \text{if all } \{p, q,...\} \text{ are retained}
+\end{cases}\label{eq:mixed-order_t_amplitudes}
+\end{align} 
+Henceforth, all t-amplitudes in this section are taken to be mixed-accuracy as defined by (\ref{eq:mixed-order_t_amplitudes}). Using the CIM energy expression, the energy can be calculated in the NO basis: 
+\begin{align}
+E& = \sum_i \bigg( \sum_{j,a,b, \in P_i} V^{ab}_{ij} (t^{ab}_{ij} + t^a_i t^b_j + t^a_j t^b_i)\bigg)+ \sum_i f_{ia} t^a_i \label{eq:GS_energy}
+\end{align}
+This procedure reduces the number of orbitals involved in the CC equations. By discarding orbitals with low NO occupancy, we hope to maintain canonical CC-like accuracy for sufficiently large $\eta$. The prohibitive scaling of highly-accurate methods means that a modest reduction in orbital space will give a disproportionately large reduction in CPU time, e.g. $0.95^7 \approx 0.69$. Furthermore, the mixed-order t-amplitudes can be used with existing CC code, with reasonable development time.   \\\\

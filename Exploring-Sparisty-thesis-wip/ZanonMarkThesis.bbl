@@ -1,0 +1,51 @@
+\begin{thebibliography}{10}
+
+\bibitem{PULAY1983151}
+P.~Pulay, ``Localizability of dynamic electron correlation,'' {\em Chemical
+  Physics Letters}, vol.~100, no.~2, pp.~151 -- 154, 1983.
+
+\bibitem{doi:10.1063/1.454111}
+S.~Saebo and P.~Pulay, ``The local correlation treatment. ii. implementation
+  and tests,'' {\em The Journal of Chemical Physics}, vol.~88, no.~3,
+  pp.~1884--1890, 1988.
+
+\bibitem{SAEBO198513}
+S.~Sæbø and P.~Pulay, ``Local configuration interaction: An efficient
+  approach for larger molecules,'' {\em Chemical Physics Letters}, vol.~113,
+  no.~1, pp.~13 -- 18, 1985.
+
+\bibitem{doi:10.1146/annurev.pc.44.100193.001241}
+S.~Saebo and P.~Pulay, ``Local treatment of electron correlation,'' {\em Annual
+  Review of Physical Chemistry}, vol.~44, no.~1, pp.~213--236, 1993.
+
+\bibitem{doi:10.1063/1.471289}
+C.~Hampel and H.~Werner, ``Local treatment of electron correlation in coupled
+  cluster theory,'' {\em The Journal of Chemical Physics}, vol.~104, no.~16,
+  pp.~6286--6297, 1996.
+
+\bibitem{doi:10.1063/1.1330207}
+M.~Schütz and H.-J. Werner, ``Low-order scaling local electron correlation
+  methods. iv. linear scaling local coupled-cluster (lccsd),'' {\em The Journal
+  of Chemical Physics}, vol.~114, no.~2, pp.~661--681, 2001.
+
+\bibitem{doi:10.1063/1.3696963}
+J.~Yang, G.~K.-L. Chan, F.~R. Manby, M.~Schütz, and H.-J. Werner, ``The
+  orbital-specific-virtual local coupled cluster singles and doubles method,''
+  {\em The Journal of Chemical Physics}, vol.~136, no.~14, p.~144105, 2012.
+
+\bibitem{doi:10.1063/1.3641642}
+H.-J. Werner and M.~Schütz, ``An efficient local coupled cluster method for
+  accurate thermochemistry of large systems,'' {\em The Journal of Chemical
+  Physics}, vol.~135, no.~14, p.~144116, 2011.
+
+\bibitem{doi:10.1080/00268976.2016.1139755}
+W.~Li, Z.~Ni, and S.~Li, ``Cluster-in-molecule local correlation method for
+  post-hartree–fock calculations of large systems,'' {\em Molecular Physics},
+  vol.~114, no.~9, pp.~1447--1460, 2016.
+
+\bibitem{C2CP23916G}
+W.~Li, Y.~Guo, and S.~Li, ``A refined cluster-in-molecule local correlation
+  approach for predicting the relative energies of large systems,'' {\em Phys.
+  Chem. Chem. Phys.}, vol.~14, pp.~7854--7862, 2012.
+
+\end{thebibliography}

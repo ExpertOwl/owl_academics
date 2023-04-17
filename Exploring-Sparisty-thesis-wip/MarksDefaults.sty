@@ -1,0 +1,23 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{MarksDefaults}[2020 Mark's defualt preamble]
+\RequirePackage[margin=1in]{geometry}
+\linespread{1.45}
+%Packages for physics/math/chem/SI unit notation
+\RequirePackage{physics,braket,amsthm,amsmath,amssymb,mathtools,mhchem,bm,siunitx,cancel}
+%Packages for plotting data and making diagrams, figure placement, arrays
+\RequirePackage{pgfplots,subfloat,float,multirow,blkarray,hhline}
+%Misc packages for formatting
+\RequirePackage{nomencl} % for list of abbrivations
+\RequirePackage{subfiles}
+\renewcommand{\nomname}{List of Abbreviations}
+\makenomenclature
+%\nomenclature{CLO}{Congruent localized orbital}
+%\nomenclature{<Abreviation>}{<Full name/description>}
+%=======================================================
+
+\newcommand{\adag}{a^{\dagger}} %Command for creation operator
+\newcommand{\matr}[1]{\b\textsl{•}m{#1}} % undergraduate algebra version
+\newcommand{\secref[1]}{\S \ref{#1}}
+%%%%%%%%%Variable Declarations%%%%%%%%%%%%
+\DeclareMathOperator\erfc{erfc}
+\DeclareSIUnit\cal{cal}

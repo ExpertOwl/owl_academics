@@ -1,0 +1,2956 @@
+steom to determine pi/pi*
+ H       -0.879859        0.000000        1.874608
+ H        0.879859        0.000000        1.874608
+ H        0.000000        2.211693        0.612518
+ H        0.000000       -2.211693        0.612518
+ H        0.000000        1.349811       -1.886050
+ H        0.000000       -1.349811       -1.886050
+ C        0.000000        0.000000        1.215652
+ C        0.000000       -1.177731        0.285415
+ C        0.000000        1.177731        0.285415
+ C        0.000000       -0.732372       -0.993420
+ C        0.000000        0.732372       -0.993420
+
+*ACES2(CALC=CCSD,BASIS=CC-PVQZ,DROPMO=1>5
+PROGRAM=MN_A3)
+
+*MRCC_GEN
+ip_low=-20
+ea_high=10
+cc_extrapolate=on
+natocc_V=on
+natocc_hbar=off
+xp_mp2_natorb=off
+xp_heff=off
+xp_eval=on
+xp_exact_fit=off 
+xp_fit_nterm=3   
+xp_min_disc_weight=0.01  
+xp_ip_thresh=0.01   
+xp_ea_thresh=0.01
+*end
+     The ACES State Variables were initialized.
+     Updating (CALCLEVEL,CCSD): 'CCSD' converts to 'CCSD' -> 10
+     Updating (BASIS,CC-PVQZ): String copy succeeded.
+     Updating (DROPMO,1>5): String copy succeeded.
+     Updating (PROGRAM,MN_A3): 'MN_A3' converts to 'MN_A3' -> 3
+     Updating (COORDINATES,CARTESIAN): 'CARTESIAN' converts to 'CARTESIAN' -> 1
+     Updating (DERIV_LEV,zero): 'zero' converts to 'OFF' -> 0
+     Updating (CC_MAXCYC,50): 0 -> 50
+     Updating (CC_EXPORDER,5): 0 -> 5
+     Updating (TAMP_SUM,5): 0 -> 5
+     Updating (ORBITALS,standard): 'standard' converts to 'STANDARD' -> 0
+     Updating (ESTATE_TOL,5): -1 -> 5
+     Updating (RESTART,0): '0' converts to 'OFF' -> 0
+     Updating (HBARABCD,OFF): 'OFF' converts to 'OFF' -> 1
+     Updating (HBARABCI,OFF): 'OFF' converts to 'OFF' -> 1
+     Updating (ABCDFULL,ON): 'ON' converts to 'ON' -> 1
+     Updating (CACHE_RECS,95): -1 -> 95
+     Updating (FILE_RECSIZ,262144): -1 -> 262144
+
+          ASV#   ASV KEY DEFINITION =    CURRENT [   DEFAULT] UNITS
+          ------------------------------------------------------------
+            1:                PRINT =          0 [         0] 
+            2:            CALCLEVEL =         10 [         0] 
+            3:            DERIV_LEV =          0 [        -1] 
+            4:              CC_CONV =          7 [         7] (tol)
+
+            5:             SCF_CONV =          7 [         7] (tol)
+            6:            XFORM_TOL =         11 [        11] (tol)
+            7:            CC_MAXCYC =         50 [         0] cycles
+            8:           LINDEP_TOL =          8 [         8] 
+
+            9:                  RDO =         -1 [        -1] 
+           10:           SCF_EXTRAP =          1 [         1] 
+           11:            REFERENCE =          0 [         0] 
+           12:          CC_EXPORDER =          5 [         0] 
+
+           13:             TAMP_SUM =          5 [         0] 
+           14:            NTOP_TAMP =         15 [        15] 
+           15:              DAMPSCF =         20 [        20] x 0.01
+           16:           SCF_MAXCYC =        150 [       150] cycles
+
+           18:                PROPS =          0 [         0] 
+           19:              DENSITY =          0 [         0] 
+           20:          SCF_EXPORDE =          6 [         6] 
+           21:          CC_EXTRAPOL =          1 [         1] 
+
+           22:            BRUECKNER =          0 [         0] 
+           23:               XFIELD =          0 [         0] x 10-6
+           24:               YFIELD =          0 [         0] x 10-6
+           25:               ZFIELD =          0 [         0] x 10-6
+
+           26:            SAVE_INTS =          0 [         0] 
+           28:               CHARGE =          0 [         0] 
+           29:          MULTIPLICTY =          1 [         1] 
+           30:          CPHF_CONVER =         12 [        12] (tol)
+
+           31:          CPHF_MAXCYC =         64 [        64] cycles
+           35:               INCORE =          0 [         0] 
+           36:          MEMORY_SIZE =  500000000 [ 500000000] Words
+           37:          FILE_RECSIZ =     262144 [        -1] Words
+
+           38:                NONHF =          0 [         0] 
+           39:             ORBITALS =          0 [        -1] 
+           40:          SCF_EXPSTAR =          8 [         8] 
+           41:          LOCK_ORBOCC =          0 [         0] 
+
+           42:          FILE_STRIPE =          0 [         0] 
+           43:               DOHBAR =          0 [         0] 
+           44:           CACHE_RECS =         95 [        -1] 
+           45:                GUESS =          0 [         0] 
+
+           46:           JODA_PRINT =          0 [         0] 
+           47:           OPT_METHOD =          0 [         0] 
+           48:          CONVERGENCE =          4 [         4] H/bohr
+           49:          EIGENVECTOR =          1 [         1] 
+
+           50:              NEGEVAL =          2 [         2] 
+           51:          CURVILINEAR =          0 [         0] 
+           52:          STP_SIZ_CTL =          0 [         0] 
+           53:             MAX_STEP =        300 [       300] millibohr
+
+           54:            VIBRATION =          0 [         0] 
+           55:            EVAL_HESS =         -1 [        -1] # of cyc.
+           56:            INTEGRALS =          1 [         1] 
+           57:          FD_STEPSIZE =          0 [         0] 10-4 bohr
+
+           58:               POINTS =          0 [         0] 
+           59:          CONTRACTION =          1 [         1] 
+           60:             SYMMETRY =          2 [         2] 
+           62:            SPHERICAL =          1 [         1] 
+
+           63:          RESET_FLAGS =          0 [         0] 
+           64:             PERT_ORB =          2 [         2] 
+           65:             GENBAS_1 =          0 [         0] 
+           66:             GENBAS_2 =          0 [         0] 
+
+           67:             GENBAS_3 =          0 [         0] 
+           68:          COORDINATES =          1 [         3] 
+           69:            CHECK_SYM =          1 [         1] 
+           70:            SCF_PRINT =          0 [         0] 
+
+           71:                  ECP =          0 [         0] 
+           72:              RESTART =          0 [         1] 
+           73:            TRANS_INV =          0 [         0] 
+           74:          HFSTABILITY =          0 [         0] 
+
+           75:             ROT_EVEC =          0 [         0] 
+           76:           BRUCK_CONV =          4 [         4] (tol)
+           78:                UNITS =          0 [         0] 
+           79:          FD_USEGROUP =          0 [         0] 
+
+           80:           FD_PROJECT =          0 [         0] 
+           83:                VTRAN =          0 [         0] 
+           84:             HF2_FILE =          1 [         1] 
+           85:             SUBGROUP =          0 [         0] 
+
+           86:           SUBGRPAXIS =          0 [         0] 
+           87:               EXCITE =          0 [         0] 
+           88:            ZETA_CONV =         12 [        12] (tol)
+           90:           TREAT_PERT =          0 [         0] 
+
+           91:          ESTATE_PROP =          0 [         0] 
+           92:           OPT_MAXCYC =         50 [        50] 
+           93:             ABCDTYPE =          0 [         0] 
+           95:           AO_LADDERS =          1 [         1] 
+
+           96:                 FOCK =          1 [         1] 
+           97:          ESTATE_MAXC =         20 [        20] 
+           98:           ESTATE_TOL =          5 [        -1] (tol)
+           99:            TURBOMOLE =          0 [         0] 
+
+          100:           GAMMA_ABCD =          0 [         0] 
+          101:            ZETA_TYPE =          1 [         1] 
+          102:          ZETA_MAXCYC =         50 [        50] 
+          103:             RESRAMAN =          0 [         0] 
+
+          104:                  PSI =          0 [         0] 
+          105:             GEOM_OPT =          0 [         0] 
+          106:             EXTERNAL =          2 [         2] 
+          107:          HESS_UPDATE =          0 [         0] 
+
+          108:         INIT_HESSIAN =          0 [         0] 
+          109:          EXTRAPOLATE =          0 [         0] 
+          201:              EA_CALC =          0 [         0] 
+          203:                 TDHF =          0 [         0] 
+
+          204:           FUNCTIONAL =          4 [         4] 
+          205:           EOM_MAXCYC =         50 [        50] cycles
+          206:              EOMPROP =          0 [         0] 
+          207:             ABCDFULL =          1 [         0] 
+
+          208:           INTGRL_TOL =         14 [        14] (tol)
+          209:             DAMP_TYP =          0 [         0] 
+          210:             DAMP_TOL =         10 [        10] x 0.01
+          211:              LSHF_A1 =          0 [         0] x 0.01
+
+          212:              LSHF_B1 =          0 [         0] x 0.01
+          213:             POLYRATE =          0 [         0] 
+          214:              IP_CALC =          0 [         0] 
+          216:            IP_SEARCH =          0 [         0] 
+
+          217:               EOMREF =          0 [         0] 
+          218:              SOLVENT =          0 [         0] 
+          219:            EE_SEARCH =          0 [         0] 
+          220:            EOM_PRJCT =          0 [         0] 
+
+          221:               NEWVRT =          0 [         0] 
+          222:             HBARABCD =          1 [         0] 
+          223:             HBARABCI =          1 [         0] 
+          224:             NT3EOMEE =          0 [         0] 
+
+          225:              NOREORI =          2 [         2] 
+          227:               KS_POT =          0 [         0] 
+          228:             DIP_CALC =          0 [         0] 
+          230:             DEA_CALC =          0 [         0] 
+
+          232:              PROGRAM =          3 [         0] 
+          233:                CCR12 =          0 [         0] 
+          234:            EOMXFIELD =          0 [         0] x 10-6
+          235:            EOMYFIELD =          0 [         0] x 10-6
+
+          236:            EOMZFIELD =          0 [         0] x 10-6
+          237:              INSERTF =          0 [         0] 
+          238:            GRAD_CALC =          0 [         0] 
+          239:            IMEM_SIZE =    3000000 [   3000000] Words
+
+          240:              MAKERHF =          0 [         0] 
+          241:           GLOBAL_MEM =          0 [         0] Words
+          242:             PRP_INTS =          0 [         0] 
+          243:           TRUNC_ORBS =          0 [         0] 
+
+          244:             FNO_KEEP =          0 [         0] percent
+          245:             FNO_BSSE =          0 [         0] 
+          246:              NATURAL =          0 [         0] 
+          248:              UNO_REF =          0 [         0] 
+
+          249:           UNO_CHARGE =          0 [         0] 
+          250:             UNO_MULT =          1 [         1] 
+          251:                RAMAN =          0 [         0] 
+          252:            KUCHARSKI =          0 [         0] 
+
+          253:             SCF_TYPE =          0 [         0] 
+          254:               DIRECT =          0 [         0] 
+          255:         SINGLE_STORE =          0 [         0] 
+          256:          PREP_VIBRON =          0 [         0] 
+
+          257:          GRID_VIBRON =          0 [         0] 
+          258:          SCAN_NORMAL =          0 [         0] 
+          259:         NORMAL_CURVY =          0 [         0] 
+          260:           GEO_SAMPLE =          0 [         0] 
+
+          261:             PART_EOM =          0 [         0] 
+          262:          ORDER_ALPHA =          0 [         0] 
+          263:               FFIELD =          0 [         0] x 10-6
+          264:             AUTO_OCC =          0 [         2] 
+
+          265:          GEN_QUARTIC =          0 [         0] 
+          266:             OOMP_CYC =         50 [        50] 
+          267:            DKH_ORDER =          0 [         0] 
+          268:           UNCONTRACT =          0 [         0] 
+
+          269:          OPT_CONTROL =          0 [         0] 
+          270:             FIRSTGEO =          0 [         0] 
+          271:               NPROCS =          1 [         1] 
+          272:               MYPROC =          0 [         0] 
+
+          273:              ELO_ORB =          0 [         0] 
+          ------------------------------------------------------------
+
+
+
+                      ACES STATE VARIABLE REGISTRATION LOG
+     ----------------------------------------------------------------------
+ BasNam = CC-PVQZ                                                                         
+  valuesize                     7
+     ----------------------------------------------------------------------
+
+
+                       ACES STATE VARIABLE VALIDATION LOG
+     ----------------------------------------------------------------------
+     ----------------------------------------------------------------------
+                         ACES STATE VARIABLES (STRINGS)
+          ------------------------------------------------------------
+          BASIS = CC-PVQZ
+          OCCUPATION = [ESTIMATED BY SCF]
+          DROPMO =    1   2   3   4   5
+          ------------------------------------------------------------
+ The value of noreori: a F                    2
+   Rotational constants (in cm-1): 
+     0.14279        0.27520        0.28132
+   Principal axis orientation for molecule:
+        0.000000000000    3.576621882880   -1.662692418585
+        0.000000000000    3.576621882880    1.662692418585
+        4.179493740858    1.191617609954    0.000000000000
+       -4.179493740858    1.191617609954    0.000000000000
+        2.550772926370   -3.529991273878    0.000000000000
+       -2.550772926370   -3.529991273878    0.000000000000
+        0.000000000000    2.331375604350    0.000000000000
+       -2.225588878255    0.573482569912    0.000000000000
+        2.225588878255    0.573482569912    0.000000000000
+       -1.383982401708   -1.843165164692    0.000000000000
+        1.383982401708   -1.843165164692    0.000000000000
+********************************************************************************
+   The full molecular point group is C2v .
+   The largest Abelian subgroup of the full molecular point group is C2v .
+   The computational point group is C2v .
+********************************************************************************
+         -----------------------------------------------
+         Cartesian coordinates corresponding to internal 
+                 coordinate input (Angstroms) 
+ ----------------------------------------------------------------
+ Z-matrix   Atomic            C o o r d i n a t e s
+  Symbol    Number           X              Y              Z
+ ----------------------------------------------------------------
+     H         1        -0.87985900     0.00000000     1.89266693
+     H         1         0.87985900     0.00000000     1.89266693
+     H         1         0.00000000     2.21169300     0.63057693
+     H         1         0.00000000    -2.21169300     0.63057693
+     H         1         0.00000000     1.34981100    -1.86799107
+     H         1         0.00000000    -1.34981100    -1.86799107
+     C         6         0.00000000     0.00000000     1.23371093
+     C         6         0.00000000    -1.17773100     0.30347393
+     C         6         0.00000000     1.17773100     0.30347393
+     C         6         0.00000000    -0.73237200    -0.97536107
+     C         6         0.00000000     0.73237200    -0.97536107
+ ----------------------------------------------------------------
+   Interatomic distance matrix (Angstroms) 
+
+                 H             H             H             H             H    
+                [ 1]        [ 2]        [ 3]        [ 4]        [ 5]
+  H    [ 1]     0.00000
+  H    [ 2]     1.75972     0.00000
+  H    [ 3]     2.69418     2.69418     0.00000
+  H    [ 4]     2.69418     2.69418     4.42339     0.00000
+  H    [ 5]     4.09129     4.09129     2.64304     4.35053     0.00000
+  H    [ 6]     4.09129     4.09129     4.35053     2.64304     2.69962
+  C    [ 7]     1.09926     1.09926     2.29246     2.29246     3.38268
+  C    [ 8]     2.16489     2.16489     3.40517     1.08447     3.33223
+  C    [ 9]     2.16489     2.16489     1.08447     3.40517     2.17827
+  C    [10]     3.08806     3.08806     3.35359     2.18344     2.26545
+  C    [11]     3.08806     3.08806     2.18344     3.35359     1.08537
+
+                 H             C             C             C             C    
+                [ 6]        [ 7]        [ 8]        [ 9]        [10]
+  H    [ 6]     0.00000
+  C    [ 7]     3.38268     0.00000
+  C    [ 8]     2.17827     1.50080     0.00000
+  C    [ 9]     3.33223     1.50080     2.35546     0.00000
+  C    [10]     1.08537     2.32731     1.35417     2.29868     0.00000
+  C    [11]     2.26545     2.32731     2.29868     1.35417     1.46474
+
+                 C    
+                [11]
+  C    [11]     0.00000
+  mkvmol in geopt A 
+  second entry point mkvmol
+  @symeqv: natms                    11
+  @symeqv: iorbit                     6
+  @symeqv: orbpop                    2                    2                    2                    1                    2                    2
+  @symeqv: member                    1                    2                    3                    4                    5                    6                    7                    8                    9                   10                   11
+  @symeqv: genby                    0                    1                    0                    3                    0                    5                    0                    0                    8                    0                   10
+  MKVMOL atom info                     6
+       1       1       1       1
+  ncharges, nghost                     0                    0
+       2       3       1       3
+  ncharges, nghost                     0                    0
+       3       5       1       5
+  ncharges, nghost                     0                    0
+       4       7       2       7
+  ncharges, nghost                     0                    0
+       5       8       2       8
+  ncharges, nghost                     0                    0
+       6      10       2      10
+  ncharges, nghost                     0                    0
+  Geometry in mkvmol_zmat 
+
+                 COLUMN   1       COLUMN   2       COLUMN   3       COLUMN   4
+ ROW   1     -1.66269241859    1.66269241859    0.00000000000    0.00000000000
+ ROW   2      0.00000000000    0.00000000000    4.17949374086   -4.17949374086
+ ROW   3      3.57662188288    3.57662188288    1.19161760995    1.19161760995
+
+                 COLUMN   5       COLUMN   6       COLUMN   7       COLUMN   8
+ ROW   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+ ROW   2      2.55077292637   -2.55077292637    0.00000000000   -2.22558887826
+ ROW   3     -3.52999127388   -3.52999127388    2.33137560435    0.57348256991
+
+                 COLUMN   9       COLUMN  10       COLUMN  11
+ ROW   1      0.00000000000    0.00000000000    0.00000000000
+ ROW   2      2.22558887826   -1.38398240171    1.38398240171
+ ROW   3      0.57348256991   -1.84316516469   -1.84316516469
+  @mkvmol_zmat: basis set per atom 
+
+The basis set definitions
+   1 H:CC-PVQZ           
+   1 H:CC-PVQZ           
+   1 H:CC-PVQZ           
+   1 H:CC-PVQZ           
+   1 H:CC-PVQZ           
+   1 H:CC-PVQZ           
+   6 C:CC-PVQZ           
+   6 C:CC-PVQZ           
+   6 C:CC-PVQZ           
+   6 C:CC-PVQZ           
+   6 C:CC-PVQZ           
+  MKVMOL ZMAT atom info                    11
+       1       1       1       1
+  ncharges, nghost                     0                    0
+       2       2       1       2
+  ncharges, nghost                     0                    0
+       3       3       1       3
+  ncharges, nghost                     0                    0
+       4       4       1       4
+  ncharges, nghost                     0                    0
+       5       5       1       5
+  ncharges, nghost                     0                    0
+       6       6       1       6
+  ncharges, nghost                     0                    0
+       7       7       2       7
+  ncharges, nghost                     0                    0
+       8       8       2       8
+  ncharges, nghost                     0                    0
+       9       9       2       9
+  ncharges, nghost                     0                    0
+      10      10       2      10
+  ncharges, nghost                     0                    0
+      11      11       2      11
+  ncharges, nghost                     0                    0
+ @GEOPT-W, Archive file not created for single-point calculation.
+ One- and two-electron integrals over symmetry-adapted AOs are calculated.\n
+ @READIN: Spherical harmonics are used.
+  @READIN-I, Nuclear repulsion energy :  156.5259849366 a.u.
+  required memory for a1 array               4451690  words 
+  required memory for a2 array                490099  words 
+
+  @TWOEL-I,  116716026 integrals of symmetry type  I I I I
+  @TWOEL-I,  502825660 integrals of symmetry type  I J I J
+  @TWOEL-I,  256733054 integrals of symmetry type  I I J J
+  @TWOEL-I,  412261234 integrals of symmetry type  I J K L
+  @TWOEL-I, Total number of 2-e integrals 1288535974.
+
+
+ACES ---SYSTEM--- (total sec) ----USER---- (total sec) -WALLCLOCK- (total sec)
+TIME   0: 0:37.37 (     37.4)   0:12:58.96 (    779.0)   0:13:36.8 (    816.8)
+  rdsoao: LD, NSO                   560                  560
+  point a2
+  rdsoao: LD, NSO                   560                  560
+
+
+ACES ---SYSTEM--- (total sec) ----USER---- (total sec) -WALLCLOCK- (total sec)
+TIME   0: 0: 0.03 (      0.0)   0: 0: 0.35 (      0.3)   0: 0: 0.4 (      0.4)
+  entered vprops 
+   Property integrals will be calculated.
+
+    --------------------------------------------------------
+                                Property evaluated at 
+    Property type              X           Y           Z
+    --------------------------------------------------------
+    Dipole moment            ----        ----        ----   
+    Second moment            ----        ----        ----   
+    Dipole velocity          ----        ----        ----   
+    Angular Momentum         ----        ----        ----   
+    --------------------------------------------------------
+
+
+ACES ---SYSTEM--- (total sec) ----USER---- (total sec) -WALLCLOCK- (total sec)
+TIME   0: 0: 0.09 (      0.1)   0: 0: 3.38 (      3.4)   0: 0: 3.5 (      3.5)
+  all done vprops 
+@VSCF: There are  455 functions in the AO basis.
+
+       There are    4 irreducible representations.
+
+
+       Irrep        # of functions
+         1                152
+         2                 93
+         3                133
+         4                 77
+
+  @VSCF-I, Parameters for SCF calculation: 
+             SCF reference function:  RHF
+       Maximum number of iterations:  150
+          Full symmetry point group: C2v 
+          Computational point group: C2v 
+             Initial density matrix: CORE                   
+          SCF convergence tolerance: 10**(- 7)
+           Convergence acceleration: RPP
+               Latest start for RPP:   8
+                          RPP order:   6
+
+  @SYMSIZ-I, Memory information:   29202640 words required.
+  @SYMSIZ-I, Fock matrices are constructed from AO integral file.
+ Initges: logicals 
+ Findf_Vib :  F
+  aodens_file  F
+  aobasmos_file  F
+  Automate  F
+  @initges: Brueckner  F
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    1.4018511178541960E-009
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    8.2485201099448922E-010
+  Occupancies from core Hamiltonian:
+
+          Alpha population by irrep:   8    3    6    1
+           Beta population by irrep:   8    3    6    1
+
+
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    1.4018511178541960E-009
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    8.2485201099448922E-010
+ 
+============================================================================
+NAMELIST: SCF_PART_OCC
+             KEYWORD        TYPE                 VALUE               DEFAULT
+--------------------  ----------  --------------------  --------------------
+            print_nl     logical                  true
+            frac_occ     logical                 false
+============================================================================
+ 
+The Alpha and Beta occupation numbers
+   1.00000   1.00000   1.00000   1.00000   1.00000   1.00000
+   1.00000   1.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   1.00000   1.00000   1.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   1.00000
+   1.00000   1.00000   1.00000   1.00000   1.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   1.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000
+
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000
+  --------------------------------------------------------------------
+  Iteration         Total Energy            Largest Error in FDS-SDF
+  --------------------------------------------------------------------
+       0          -147.0830093489              0.7930347369D+03
+       1          -152.3061680502              0.2709300727D+02
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    4.5415673229510373E-010
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    2.4237548495737848E-010
+       2          -164.7322859173              0.7160085792D+03
+       3          -157.6351187074              0.4287628858D+02
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    4.1970394003211682E-010
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    2.4768254442320177E-010
+       4          -165.1397139304              0.7936846422D+03
+       5          -155.2012065242              0.9342686405D+02
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    3.5703992472507599E-010
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    2.3566177118463164E-010
+       6          -154.3084687211              0.8082207372D+03
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    1.3482865472420717E-010
+       7          -135.9994829679              0.2140175719D+03
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    2.9039031890101905E-010
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    2.2975094693216108E-010
+       8          -133.8327452327              0.7890364526D+03
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    4.0253485131735642E-010
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    2.6036978809421650E-010
+       9          -166.7861576797              0.8786000696D+03
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    3.5359850965766167E-010
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    2.1716596310941347E-010
+      10          -159.3281168257              0.5984696699D+03
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    3.5642385657480569E-010
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    2.3209670041999045E-010
+      11          -162.4529667360              0.4950800853D+03
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    1.7547685600047790E-010
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    1.1212524870162985E-010
+      12          -177.0710645497              0.2583784568D+03
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    1.5270892876780278E-010
+      13          -192.2108747072              0.2617544823D+02
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    1.2629275057652548E-010
+      14          -192.7037607910              0.9473923837D+01
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    1.3800628432462762E-010
+      15          -192.8593272788              0.4401276121D+01
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    1.4650445917183119E-010
+      16          -192.8675720632              0.1224823050D+01
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    1.4615619505680202E-010
+      17          -192.8686653420              0.3680104467D+00
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    1.4288698636831867E-010
+      18          -192.8688006428              0.2116664730D+00
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    1.4643203549670122E-010
+      19          -192.8688245501              0.2680531023D-01
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    1.5209535768421351E-010
+      20          -192.8688268648              0.7531112445D-02
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    1.5297746007230870E-010
+      21          -192.8688269667              0.1065743765D-02
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    1.5924903068323740E-010
+      22          -192.8688269719              0.5785308099D-03
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    1.4000743717591108E-010
+      23          -192.8688269721              0.2305226888D-03
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    1.4589373367171130E-010
+      24          -192.8688269721              0.5944640253D-04
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    1.4803087163180184E-010
+      25          -192.8688269721              0.5069798831D-05
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    1.5307741852528187E-010
+      26          -192.8688269721              0.4588061316D-05
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    1.4110984472917587E-010
+      27          -192.8688269721              0.5127110683D-06
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    1.3741994863000415E-010
+      28          -192.8688269721              0.1240669434D-06
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    1.5755338261249849E-010
+      29          -192.8688269721              0.4404387255D-07
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    1.3436773682639139E-010
+ @EIG: WARNING - the matrix is not symmetric
+       sum of differences is    1.0034594867276009E-010
+
+@VSCF: SCF has converged.
+
+     E(SCF)=      -192.8688269721
+
+
+@VSCF: Final occupancies:
+
+          Alpha population by irrep:   9    2    6    1
+           Beta population by irrep:   9    2    6    1
+
+ The AOBASMOS? F
+ Vib calc,  AOBASMOS, GEO?                    0 F                    1
+ Creating or updating The AOBASMOS file
+
+
+      Trace of projected alpha density matrix =   1.000000000
+
+      Alpha part of wavefunction is symmetric.
+
+
+  ORBITAL EIGENVALUES (ALPHA)  (1H = 27.2113957 eV)
+
+       MO #        E(hartree)               E(eV)           FULLSYM    COMPSYM
+       ----   --------------------   --------------------   -------   ---------
+    1     1         -11.2296689572        -305.5749655746      A1        A1 (1)
+    2     2         -11.2274639071        -305.5149630825      A1        A1 (1)
+    3   246         -11.2268882965        -305.4992999157      B2        B2 (3)
+    4     3         -11.2254116406        -305.4591180489      A1        A1 (1)
+    5   247         -11.2252561953        -305.4548881645      B2        B2 (3)
+    6     4          -1.1480196880         -31.2392180015      A1        A1 (1)
+    7   248          -0.9600607645         -26.1245933584      B2        B2 (3)
+    8     5          -0.9541528088         -25.9638296391      A1        A1 (1)
+    9     6          -0.7533241178         -20.4990006591      A1        A1 (1)
+   10   249          -0.7255558710         -19.7433879072      B2        B2 (3)
+   11     7          -0.6931020637         -18.8602745162      A1        A1 (1)
+   12   153          -0.5917202490         -16.1015338392      B1        B1 (2)
+   13   250          -0.5578153438         -15.1789340485      B2        B2 (3)
+   14     8          -0.5259609995         -14.3121328809      A1        A1 (1)
+   15     9          -0.5078273607         -13.8186912585      A1        A1 (1)
+   16   251          -0.5022872877         -13.6679381399      B2        B2 (3)
+   17   154          -0.4119768923         -11.2104662363      B1        B1 (2)
+   18   379          -0.3051406963          -8.3033042317      A2        A2 (4)
+  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   19   155           0.1157216132           3.1489466068      B1        B1 (2)
+   20    10           0.1194329605           3.2499375482      A1        A1 (1)
+   21    11           0.1438893593           3.9154302930      A1        A1 (1)
+   22   252           0.1446400404           3.9358573721      B2        B2 (3)
+   23   253           0.1711096963           4.6561336530      B2        B2 (3)
+   24    12           0.1726614388           4.6983587328      A1        A1 (1)
+   25   156           0.1735636419           4.7229089397      B1        B1 (2)
+   26   380           0.2136308628           5.8131939402      A2        A2 (4)
+   27    13           0.2341958311           6.3727954308      A1        A1 (1)
+   28   254           0.2579594083           7.0194355335      B2        B2 (3)
+   29    14           0.2883460801           7.8462992830      A1        A1 (1)
+   30   255           0.2994247111           8.1477642972      B2        B2 (3)
+   31    15           0.3308792645           9.0036865957      A1        A1 (1)
+   32   157           0.3363854711           9.1535181619      B1        B1 (2)
+   33    16           0.3579228461           9.7395801945      A1        A1 (1)
+   34   381           0.3605031979           9.8097951680      A2        A2 (4)
+   35   256           0.3846629062          10.4672145530      B2        B2 (3)
+   36   158           0.4172878607          11.3549850993      B1        B1 (2)
+   37   159           0.4303425181          11.7102205459      B1        B1 (2)
+   38    17           0.4484043279          12.2017075992      A1        A1 (1)
+   39   257           0.4619444119          12.5701521829      B2        B2 (3)
+   40   382           0.4752635526          12.9325845919      A2        A2 (4)
+   41   258           0.4794844345          13.0474406789      B2        B2 (3)
+   42    18           0.4818767529          13.1125390031      A1        A1 (1)
+   43    19           0.4939354039          13.4406717247      A1        A1 (1)
+   44   259           0.4968307706          13.5194586953      B2        B2 (3)
+   45    20           0.5009208101          13.6307543791      A1        A1 (1)
+   46   160           0.5164317868          14.0528297015      B1        B1 (2)
+   47   260           0.5172763588          14.0758116856      B2        B2 (3)
+   48    21           0.5347950428          14.5525195284      A1        A1 (1)
+   49   261           0.5439952340          14.8028695724      B2        B2 (3)
+   50    22           0.5593125172          15.2196742253      A1        A1 (1)
+   51   383           0.6134004714          16.6914829503      A2        A2 (4)
+   52    23           0.6370390235          17.3347209437      A1        A1 (1)
+   53   262           0.6443114030          17.5326125406      B2        B2 (3)
+   54   161           0.6460883245          17.5809650555      B1        B1 (2)
+   55   162           0.7211891656          19.6245637585      B1        B1 (2)
+   56   263           0.7386145886          20.0987338405      B2        B2 (3)
+   57   384           0.7386590178          20.0999428209      A2        A2 (4)
+   58   264           0.7505066033          20.4223321577      B2        B2 (3)
+   59    24           0.7583231643          20.6350316930      A1        A1 (1)
+   60    25           0.7889820290          21.4693021919      A1        A1 (1)
+   61   265           0.8167296925          22.2243548423      B2        B2 (3)
+   62    26           0.8566262002          23.3099944997      A1        A1 (1)
+   63   163           0.9007412754          24.5104272690      B1        B1 (2)
+   64   385           0.9054911311          24.6396774700      A2        A2 (4)
+   65   164           0.9261259492          25.2011796720      B1        B1 (2)
+   66    27           0.9270677903          25.2268084824      A1        A1 (1)
+   67   266           0.9278530799          25.2481773079      B2        B2 (3)
+   68   165           0.9387266683          25.5440628259      B1        B1 (2)
+   69    28           0.9444844391          25.7007398058      A1        A1 (1)
+   70   386           0.9529019010          25.9297906902      A2        A2 (4)
+   71    29           0.9598084655          26.1177279519      A1        A1 (1)
+   72   267           0.9645992932          26.2480930585      B2        B2 (3)
+   73    30           0.9913807455          26.9768537550      A1        A1 (1)
+   74   166           1.0095458877          27.4711526274      B1        B1 (2)
+   75   268           1.0378013815          28.2400240498      B2        B2 (3)
+   76    31           1.0402476186          28.3065895748      A1        A1 (1)
+   77   269           1.0553722927          28.7181530662      B2        B2 (3)
+   78   270           1.0974089294          29.8620286223      B2        B2 (3)
+   79    32           1.1038951491          30.0385277125      A1        A1 (1)
+   80   387           1.1103883090          30.2152156573      A2        A2 (4)
+   81   167           1.1398964438          31.0181731894      B1        B1 (2)
+   82    33           1.1525770128          31.3632291714      A1        A1 (1)
+   83   168           1.1612084835          31.5981035352      B1        B1 (2)
+   84   271           1.1676797563          31.7741958999      B2        B2 (3)
+   85   272           1.1794939006          32.0956752539      B2        B2 (3)
+   86    34           1.1935324920          32.4776849209      A1        A1 (1)
+   87    35           1.1979153187          32.5969477535      A1        A1 (1)
+   88   273           1.2158637837          33.0853505357      B2        B2 (3)
+   89    36           1.2181982908          33.1488757330      A1        A1 (1)
+   90   388           1.2199717178          33.1971331571      A2        A2 (4)
+   91   169           1.2379874750          33.6873670532      B1        B1 (2)
+   92   389           1.2381679786          33.6922788088      A2        A2 (4)
+   93   274           1.2400631396          33.7438487841      B2        B2 (3)
+   94    37           1.2712231031          34.5917548824      A1        A1 (1)
+   95   390           1.2872089442          35.0267519288      A2        A2 (4)
+   96   275           1.3124455910          35.7134763128      B2        B2 (3)
+   97    38           1.4316399846          38.9569221201      A1        A1 (1)
+   98   276           1.4865396057          40.4508174353      B2        B2 (3)
+   99   277           1.5107276190          41.1090070346      B2        B2 (3)
+  100    39           1.5259941866          41.5244316465      A1        A1 (1)
+  101    40           1.5402149150          41.9113975138      A1        A1 (1)
+  102   170           1.5623865618          42.5147189688      B1        B1 (2)
+  103   391           1.6354397632          44.5025985408      A2        A2 (4)
+  104   171           1.6594932871          45.1571284980      B1        B1 (2)
+  105    41           1.6682111296          45.3943531598      A1        A1 (1)
+  106   278           1.7019678612          46.3129209393      B2        B2 (3)
+  107   172           1.7501158669          47.6230953751      B1        B1 (2)
+  108    42           1.7504716855          47.6327776952      A1        A1 (1)
+  109    43           1.7877496317          48.6471626401      A1        A1 (1)
+  110   173           1.7954931123          48.8578735556      B1        B1 (2)
+  111   279           1.8313302638          49.8330524662      B2        B2 (3)
+  112    44           1.8997144347          51.6938811992      A1        A1 (1)
+  113    45           1.9124586561          52.0406692520      A1        A1 (1)
+  114   280           1.9219594479          52.2991990550      B2        B2 (3)
+  115   392           1.9418030322          52.8391706793      A2        A2 (4)
+  116   281           1.9531920729          53.1490823729      B2        B2 (3)
+  117   174           1.9755803639          53.7582990194      B1        B1 (2)
+  118    46           1.9837225480          53.9798592136      A1        A1 (1)
+  119    47           2.0149663869          54.8300476751      A1        A1 (1)
+  120   393           2.0160611841          54.8598386365      A2        A2 (4)
+  121   175           2.0174776591          54.8983828965      B1        B1 (2)
+  122   282           2.0263987688          55.1411387449      B2        B2 (3)
+  123    48           2.0358596923          55.3985836763      A1        A1 (1)
+  124   176           2.0409040692          55.5358482125      B1        B1 (2)
+  125   394           2.0529468074          55.8635479261      A2        A2 (4)
+  126    49           2.0644720101          56.1771647774      A1        A1 (1)
+  127   283           2.0653463726          56.2009574018      B2        B2 (3)
+  128   177           2.1299328562          57.9584457632      B1        B1 (2)
+  129   395           2.1398751511          58.2289894840      A2        A2 (4)
+  130   178           2.1422362319          58.2932377889      B1        B1 (2)
+  131   284           2.1528868139          58.5830549896      B2        B2 (3)
+  132    50           2.1529955242          58.5860131492      A1        A1 (1)
+  133   285           2.2030232650          59.9473378006      B2        B2 (3)
+  134   396           2.2094269275          60.1215903948      A2        A2 (4)
+  135    51           2.2145259934          60.2603430948      A1        A1 (1)
+  136   397           2.2611298077          61.5284979256      A2        A2 (4)
+  137   286           2.2618405744          61.5478388805      B2        B2 (3)
+  138   179           2.2652249965          61.6399337280      B1        B1 (2)
+  139   287           2.2972178556          62.5105040784      B2        B2 (3)
+  140   180           2.3078325888          62.7993457823      B1        B1 (2)
+  141   398           2.3204723281          63.1432907310      A2        A2 (4)
+  142    52           2.3222586192          63.1918982040      A1        A1 (1)
+  143   181           2.3525065898          64.0149877031      B1        B1 (2)
+  144    53           2.3725157318          64.5594643827      A1        A1 (1)
+  145   399           2.3921190434          65.0928978502      A2        A2 (4)
+  146   288           2.3941215739          65.1473895020      B2        B2 (3)
+  147    54           2.4202555134          65.8585304709      A1        A1 (1)
+  148   400           2.4429461213          66.4759735805      A2        A2 (4)
+  149   182           2.4454043548          66.5428655439      B1        B1 (2)
+  150   289           2.4612085225          66.9729190051      B2        B2 (3)
+  151    55           2.4885079910          67.7157756449      A1        A1 (1)
+  152   290           2.4979578537          67.9729195977      B2        B2 (3)
+  153   183           2.5081215667          68.2494884163      B1        B1 (2)
+  154   291           2.5167406434          68.4840255205      B2        B2 (3)
+  155    56           2.5188041135          68.5401754233      A1        A1 (1)
+  156   401           2.5486432182          69.3521391088      A2        A2 (4)
+  157    57           2.5509240290          69.4142031541      A1        A1 (1)
+  158   184           2.5910794929          70.5068893724      B1        B1 (2)
+  159   292           2.6477813529          72.0498261208      B2        B2 (3)
+  160   402           2.6590861656          72.3574458521      A2        A2 (4)
+  161    58           2.6687808773          72.6212524883      A1        A1 (1)
+  162    59           2.6757586733          72.8111280577      A1        A1 (1)
+  163   185           2.7031527252          73.5565584416      B1        B1 (2)
+  164   293           2.7163266647          73.9150397234      B2        B2 (3)
+  165   294           2.7630536875          75.1865472308      B2        B2 (3)
+  166    60           2.8062969560          76.3632569201      A1        A1 (1)
+  167   186           2.8338256027          77.1123498187      B1        B1 (2)
+  168    61           2.8395237749          77.2674050373      A1        A1 (1)
+  169   295           2.8459674579          77.4427466465      B2        B2 (3)
+  170   403           2.8505251995          77.5667691558      A2        A2 (4)
+  171   187           2.8557777561          77.7096985537      B1        B1 (2)
+  172    62           2.8791614416          78.3460012721      A1        A1 (1)
+  173   404           2.8850851506          78.5071936613      A2        A2 (4)
+  174   296           2.9239537867          79.5648634985      B2        B2 (3)
+  175    63           2.9416328722          80.0459360906      A1        A1 (1)
+  176   405           2.9418086696          80.0507197825      A2        A2 (4)
+  177    64           2.9714238467          80.8565900843      A1        A1 (1)
+  178    65           2.9815838040          81.1330567039      A1        A1 (1)
+  179   297           2.9874560596          81.2928489735      B2        B2 (3)
+  180   188           3.0065687018          81.8129306442      B1        B1 (2)
+  181   298           3.0136074648          82.0044652098      B2        B2 (3)
+  182   406           3.0204244219          82.1899641269      A2        A2 (4)
+  183    66           3.1147852140          84.7576529781      A1        A1 (1)
+  184   299           3.1299841550          85.1712373753      B2        B2 (3)
+  185   300           3.1787578611          86.4984379919      B2        B2 (3)
+  186   189           3.1966918971          86.9864481435      B1        B1 (2)
+  187    67           3.1967869345          86.9890342435      A1        A1 (1)
+  188   301           3.2451701289          88.3056084901      B2        B2 (3)
+  189    68           3.2694590370          88.9665435801      A1        A1 (1)
+  190   190           3.2960719451          89.6907179537      B1        B1 (2)
+  191    69           3.3522034570          91.2181347345      A1        A1 (1)
+  192   407           3.3591138669          91.4061766340      A2        A2 (4)
+  193   191           3.3848026213          92.1052034943      B1        B1 (2)
+  194   408           3.3929746652          92.3275762153      A2        A2 (4)
+  195   302           3.4139904330          92.8994445887      B2        B2 (3)
+  196    70           3.4214224211          93.1016793566      A1        A1 (1)
+  197   192           3.4581976061          94.1023834679      B1        B1 (2)
+  198   193           3.5360921463          96.2220026236      B1        B1 (2)
+  199   409           3.5520792685          96.6570345335      A2        A2 (4)
+  200    71           3.5613572578          96.9095015718      A1        A1 (1)
+  201   194           3.5668624451          97.0593054024      B1        B1 (2)
+  202   303           3.5823986536          97.4820673173      B2        B2 (3)
+  203   304           3.6653328141          99.7388215778      B2        B2 (3)
+  204   305           3.6996271590         100.6720185671      B2        B2 (3)
+  205    72           3.7037205031         100.7834041730      A1        A1 (1)
+  206   306           3.7264418619         101.4016840582      B2        B2 (3)
+  207    73           3.7481763491         101.9931097894      A1        A1 (1)
+  208    74           3.7652608169         102.4580020013      A1        A1 (1)
+  209    75           3.8296990461         104.2114561543      A1        A1 (1)
+  210   307           3.8341686783         104.3330810857      B2        B2 (3)
+  211   195           3.8788248178         105.5482369688      B1        B1 (2)
+  212   410           3.9022482823         106.1856221290      A2        A2 (4)
+  213   411           3.9211022835         106.6986658162      A2        A2 (4)
+  214   308           3.9293336468         106.9226527006      B2        B2 (3)
+  215    76           3.9374992003         107.1448488082      A1        A1 (1)
+  216   309           3.9788662884         108.2705050104      B2        B2 (3)
+  217   412           4.0350236234         109.7986244749      A2        A2 (4)
+  218   310           4.0709538004         110.7763347380      B2        B2 (3)
+  219    77           4.0734932633         110.8454370678      A1        A1 (1)
+  220   311           4.1489781708         112.8994867570      B2        B2 (3)
+  221    78           4.1632741327         113.2884998328      A1        A1 (1)
+  222   196           4.1705603520         113.4867680279      B1        B1 (2)
+  223    79           4.1865323694         113.9213889157      A1        A1 (1)
+  224    80           4.2316676114         115.1495818449      A1        A1 (1)
+  225   312           4.2362338220         115.2738348089      B2        B2 (3)
+  226   413           4.2954104033         116.8841121786      A2        A2 (4)
+  227   197           4.3577971452         118.5817424974      B1        B1 (2)
+  228   313           4.4137318650         120.1038042919      B2        B2 (3)
+  229    81           4.4369162587         120.7346840027      A1        A1 (1)
+  230   314           4.4794423786         121.8918790784      B2        B2 (3)
+  231    82           4.6208648221         125.7401811491      A1        A1 (1)
+  232    83           4.7440235126         129.0915010122      A1        A1 (1)
+  233   315           4.8010041051         130.6420224611      B2        B2 (3)
+  234   316           4.8510578962         132.0040559776      B2        B2 (3)
+  235    84           5.1263430564         139.4949494028      A1        A1 (1)
+  236   198           5.1592805104         140.3912234957      B1        B1 (2)
+  237   199           5.1905856509         141.2430800619      B1        B1 (2)
+  238   414           5.2400105637         142.5880009218      A2        A2 (4)
+  239    85           5.2620742396         143.1883843361      A1        A1 (1)
+  240   415           5.3264315773         144.9396373179      A2        A2 (4)
+  241   317           5.3984634978         146.8997264112      B2        B2 (3)
+  242    86           5.4038004745         147.0449529952      A1        A1 (1)
+  243   200           5.4165764387         147.3926048123      B1        B1 (2)
+  244   416           5.4488677852         148.2712974196      A2        A2 (4)
+  245   318           5.4674801772         148.7777665829      B2        B2 (3)
+  246    87           5.4928316361         149.4676151646      A1        A1 (1)
+  247   201           5.5303899582         150.4896295290      B1        B1 (2)
+  248   202           5.5860295505         152.0036604893      B1        B1 (2)
+  249   319           5.6559635699         153.9066627643      B2        B2 (3)
+  250   417           5.6595044175         154.0030141709      A2        A2 (4)
+  251   203           5.6778125913         154.5012051321      B1        B1 (2)
+  252    88           5.7040347992         155.2147480076      A1        A1 (1)
+  253   418           5.7131095786         155.4616854199      A2        A2 (4)
+  254   204           5.7231901895         155.7359929118      B1        B1 (2)
+  255   419           5.7741514149         157.1227189835      A2        A2 (4)
+  256    89           5.8330072706         158.7242689624      A1        A1 (1)
+  257   320           5.8459614908         159.0767713742      B2        B2 (3)
+  258   205           5.8664704714         159.6348493584      B1        B1 (2)
+  259   321           5.8974442886         160.4776901554      B2        B2 (3)
+  260   420           5.9451659567         161.7762633504      A2        A2 (4)
+  261    90           5.9900294664         162.9970620636      A1        A1 (1)
+  262    91           6.0014375903         163.3074930376      A1        A1 (1)
+  263   421           6.0060992959         163.4343445543      A2        A2 (4)
+  264    92           6.0372805546         164.2828301223      A1        A1 (1)
+  265   322           6.0610766196         164.9303542651      B2        B2 (3)
+  266   206           6.0641224462         165.0132354576      B1        B1 (2)
+  267   323           6.0751385294         165.3129984551      B2        B2 (3)
+  268   207           6.0951517270         165.8575854963      B1        B1 (2)
+  269   422           6.1054197835         166.1369936440      A2        A2 (4)
+  270    93           6.1150677935         166.3995294615      A1        A1 (1)
+  271   208           6.1349534249         166.9406452448      B1        B1 (2)
+  272    94           6.1488680233         167.3192808893      A1        A1 (1)
+  273   209           6.1577375026         167.5606318004      B1        B1 (2)
+  274   324           6.1598533100         167.6182058712      B2        B2 (3)
+  275    95           6.1861924313         168.3349301249      A1        A1 (1)
+  276   423           6.1955768602         168.5902935338      A2        A2 (4)
+  277   210           6.2253649153         169.4008680882      B1        B1 (2)
+  278   325           6.2322322228         169.5877371101      B2        B2 (3)
+  279   424           6.2433725234         169.8908802377      A2        A2 (4)
+  280    96           6.2562397510         170.2410154575      A1        A1 (1)
+  281   326           6.2864061790         171.0618860669      B2        B2 (3)
+  282   211           6.3065789927         171.6108164838      B1        B1 (2)
+  283   212           6.3146985832         171.8317618735      B1        B1 (2)
+  284   327           6.3263399421         172.1485394966      B2        B2 (3)
+  285    97           6.3303946655         172.2588741814      A1        A1 (1)
+  286   425           6.3451340245         172.6599527097      A2        A2 (4)
+  287   426           6.3758397101         173.4954972710      A2        A2 (4)
+  288    98           6.3826212621         173.6800327657      A1        A1 (1)
+  289   213           6.3922430165         173.9418541336      B1        B1 (2)
+  290   328           6.3999115204         174.1505248274      B2        B2 (3)
+  291    99           6.4044124076         174.2730002494      A1        A1 (1)
+  292   100           6.4227874973         174.7730120869      A1        A1 (1)
+  293   329           6.4619749054         175.8393561541      B2        B2 (3)
+  294   214           6.4820493494         176.3856097941      B1        B1 (2)
+  295   101           6.4927931783         176.6779643720      A1        A1 (1)
+  296   427           6.4933186372         176.6922628424      A2        A2 (4)
+  297   330           6.5212355726         177.4519216197      B2        B2 (3)
+  298   215           6.5389758208         177.9346585324      B1        B1 (2)
+  299   102           6.5629372505         178.5866824781      A1        A1 (1)
+  300   331           6.5635661391         178.6037954129      B2        B2 (3)
+  301   428           6.5665577928         178.6852024859      A2        A2 (4)
+  302   332           6.5945814854         179.4477662739      B2        B2 (3)
+  303   103           6.6375764751         180.6177199517      A1        A1 (1)
+  304   429           6.6381676227         180.6338059034      A2        A2 (4)
+  305   333           6.6504681976         180.9685217154      B2        B2 (3)
+  306   216           6.6683028425         181.4538272946      B1        B1 (2)
+  307   104           6.7130539286         182.6715668059      A1        A1 (1)
+  308   334           6.7163390450         182.7609594095      B2        B2 (3)
+  309   105           6.7298857230         183.1295834236      A1        A1 (1)
+  310   106           6.7721328675         184.2791871893      A1        A1 (1)
+  311   430           6.8049523091         185.1722500021      A2        A2 (4)
+  312   217           6.8194375842         185.5664145555      B1        B1 (2)
+  313   335           6.8313391364         185.8902724001      B2        B2 (3)
+  314   218           6.8616777525         186.7158284886      B1        B1 (2)
+  315   431           6.8859033667         187.3750412625      A2        A2 (4)
+  316   107           6.8968852267         187.6738730020      A1        A1 (1)
+  317   432           6.9022182346         187.8189915882      A2        A2 (4)
+  318   336           6.9058732263         187.9184490138      B2        B2 (3)
+  319   219           6.9217895216         188.3515536254      B1        B1 (2)
+  320   108           6.9595168096         189.3781657876      A1        A1 (1)
+  321   337           7.0014443181         190.5190718108      B2        B2 (3)
+  322   433           7.0235265336         191.1199597148      A2        A2 (4)
+  323   109           7.0885707632         192.8899039845      A1        A1 (1)
+  324   220           7.1307626491         194.0380040868      B1        B1 (2)
+  325   434           7.1360498439         194.1818760374      A2        A2 (4)
+  326   221           7.1471714287         194.4845098811      B1        B1 (2)
+  327   338           7.1524534743         194.6282417150      B2        B2 (3)
+  328   222           7.1827581875         195.4528752586      B1        B1 (2)
+  329   110           7.1846624219         195.5046921332      A1        A1 (1)
+  330   339           7.2282661705         196.6912109897      B2        B2 (3)
+  331   435           7.2408287641         197.0330566954      A2        A2 (4)
+  332   111           7.2692350582         197.8060316061      A1        A1 (1)
+  333   223           7.3191763061         199.1650026625      B1        B1 (2)
+  334   340           7.3205547379         199.2025117175      B2        B2 (3)
+  335   112           7.3770203697         200.7390203677      A1        A1 (1)
+  336   341           7.4429108925         202.5319934551      B2        B2 (3)
+  337   113           7.4475603648         202.6585120867      A1        A1 (1)
+  338   224           7.4663599086         203.1700739116      B1        B1 (2)
+  339   436           7.4864131941         203.7157517990      A2        A2 (4)
+  340   437           7.5089189134         204.3281638318      A2        A2 (4)
+  341   114           7.5115041375         204.3985113867      A1        A1 (1)
+  342   342           7.5178363384         204.5708194122      B2        B2 (3)
+  343   225           7.5537316729         205.5475815628      B1        B1 (2)
+  344   343           7.5766867769         206.1722219818      B2        B2 (3)
+  345   344           7.6851844005         209.1245937485      B2        B2 (3)
+  346   115           7.7472425165         210.8132817009      A1        A1 (1)
+  347   345           7.8015726112         212.2916794058      B2        B2 (3)
+  348   116           7.8159728382         212.6835296820      A1        A1 (1)
+  349   226           7.8558612660         213.7689494736      B1        B1 (2)
+  350   438           7.8896906311         214.6894937137      A2        A2 (4)
+  351   117           7.8969095749         214.8859312506      A1        A1 (1)
+  352   346           7.9367652225         215.9704590470      B2        B2 (3)
+  353   439           7.9462208219         216.2277591054      A2        A2 (4)
+  354   227           7.9530956116         216.4148317278      B1        B1 (2)
+  355   118           7.9995021189         217.6776175596      A1        A1 (1)
+  356   228           8.0387376037         218.7452698632      B1        B1 (2)
+  357   347           8.0420781498         218.8361707857      B2        B2 (3)
+  358   119           8.0483015970         219.0055194678      A1        A1 (1)
+  359   440           8.0501615596         219.0561316473      A2        A2 (4)
+  360   120           8.0583565450         219.2791286375      A1        A1 (1)
+  361   348           8.0953987178         220.2870978586      B2        B2 (3)
+  362   441           8.1169629670         220.8738911783      A2        A2 (4)
+  363   229           8.1194829709         220.9424640012      B1        B1 (2)
+  364   121           8.1666915500         222.2270753272      A1        A1 (1)
+  365   349           8.1767008109         222.4994412852      B2        B2 (3)
+  366   230           8.2041639183         223.2467507685      B1        B1 (2)
+  367   350           8.2297110665         223.9419243272      B2        B2 (3)
+  368   442           8.2470312368         224.4132303359      A2        A2 (4)
+  369   122           8.2713396082         225.0746950491      A1        A1 (1)
+  370   231           8.3310392605         226.6992059097      B1        B1 (2)
+  371   351           8.3608333167         227.5099437614      B2        B2 (3)
+  372   123           8.3624688013         227.5544475823      A1        A1 (1)
+  373   443           8.3798748295         228.0280899011      A2        A2 (4)
+  374   352           8.4052317241         228.7180863934      B2        B2 (3)
+  375   124           8.4217919401         229.1687129847      A1        A1 (1)
+  376   232           8.4482461790         229.8885697483      B1        B1 (2)
+  377   353           8.4898814240         231.0215228756      B2        B2 (3)
+  378   444           8.4986781591         231.2608943145      A2        A2 (4)
+  379   125           8.5151007268         231.7077753034      A1        A1 (1)
+  380   126           8.5194574394         231.8263275316      A1        A1 (1)
+  381   445           8.5271891403         232.0367179058      A2        A2 (4)
+  382   354           8.5523273722         232.7207642802      B2        B2 (3)
+  383   233           8.5628645337         233.0074951507      B1        B1 (2)
+  384   446           8.6064240436         234.1928102122      A2        A2 (4)
+  385   355           8.6496169975         235.3681507730      B2        B2 (3)
+  386   127           8.6588630129         235.6197477569      A1        A1 (1)
+  387   128           8.6833733015         236.2867069169      A1        A1 (1)
+  388   234           8.6879782566         236.4120141723      B1        B1 (2)
+  389   235           8.7236127030         237.3816771946      B1        B1 (2)
+  390   356           8.7517835764         238.1482459775      B2        B2 (3)
+  391   129           8.7787664994         238.8824889722      A1        A1 (1)
+  392   447           8.8487477381         240.7867761500      A2        A2 (4)
+  393   130           8.8597491947         241.0861411388      A1        A1 (1)
+  394   357           8.8633737110         241.1847692872      B2        B2 (3)
+  395   236           8.8831431994         241.7227246593      B1        B1 (2)
+  396   358           8.9591959484         243.7922261049      B2        B2 (3)
+  397   448           9.0254806294         245.5959247882      A2        A2 (4)
+  398   237           9.0362096731         245.8878770416      B1        B1 (2)
+  399   449           9.0375442684         245.9241932425      A2        A2 (4)
+  400   359           9.0525970953         246.3338016742      B2        B2 (3)
+  401   131           9.0560224551         246.4270104951      A1        A1 (1)
+  402   360           9.0684343987         246.7647568029      B2        B2 (3)
+  403   132           9.0912606064         247.3858897725      A1        A1 (1)
+  404   133           9.1949866031         250.2084189120      A1        A1 (1)
+  405   361           9.2002761377         250.3523545328      B2        B2 (3)
+  406   238           9.2038832498         250.4505090876      B1        B1 (2)
+  407   239           9.2909832301         252.8206211158      B1        B1 (2)
+  408   450           9.3172186938         253.5345247013      A2        A2 (4)
+  409   451           9.3405960764         254.1706559093      A2        A2 (4)
+  410   134           9.3517897677         254.4752518709      A1        A1 (1)
+  411   362           9.3892498332         255.4945925379      B2        B2 (3)
+  412   135           9.4627575211         257.4948393211      A1        A1 (1)
+  413   240           9.4663833384         257.5935028686      B1        B1 (2)
+  414   452           9.4669386181         257.6086128058      A2        A2 (4)
+  415   363           9.5367169195         259.5073777756      B2        B2 (3)
+  416   136           9.5525859451         259.9391961116      A1        A1 (1)
+  417   364           9.5760256498         260.5770231900      B2        B2 (3)
+  418   137           9.6258856143         261.9337824123      A1        A1 (1)
+  419   138           9.6981202147         263.8993867095      A1        A1 (1)
+  420   365           9.7791776134         266.1050716593      B2        B2 (3)
+  421   366           9.8939552073         269.2283301837      B2        B2 (3)
+  422   139           9.9378993270         270.4241110147      A1        A1 (1)
+  423   367           9.9903092508         271.8502581897      B2        B2 (3)
+  424   368          10.0999236079         274.8330178343      B2        B2 (3)
+  425   140          10.1198885987         275.3762930994      A1        A1 (1)
+  426   241          10.1313186987         275.6873220724      B1        B1 (2)
+  427   453          10.1877794781         277.2236986840      A2        A2 (4)
+  428   369          10.2731886303         279.5478009211      B2        B2 (3)
+  429   141          10.3408514795         281.3890014844      A1        A1 (1)
+  430   242          10.3417132736         281.4124521051      B1        B1 (2)
+  431   454          10.3911248487         282.7570100263      A2        A2 (4)
+  432   142          10.4117402312         283.3179833574      A1        A1 (1)
+  433   370          10.4496502521         284.3495679376      B2        B2 (3)
+  434   243          10.5314931337         286.5766269719      B1        B1 (2)
+  435   143          10.5585640283         287.3132637990      A1        A1 (1)
+  436   371          10.5705672365         287.6398878470      B2        B2 (3)
+  437   144          10.6617772507         290.1218396351      A1        A1 (1)
+  438   372          10.7115916818         291.4773598312      B2        B2 (3)
+  439   455          10.7739473265         293.1741439516      A2        A2 (4)
+  440   244          10.8888530853         296.3008900236      B1        B1 (2)
+  441   145          10.9346392566         297.5467956486      A1        A1 (1)
+  442   373          11.1337976917         302.9661746329      B2        B2 (3)
+  443   146          11.2884792869         307.1752767276      A1        A1 (1)
+  444   374          11.9294733543         324.6176199376      B2        B2 (3)
+  445   147          12.1718232351         331.2122984405      A1        A1 (1)
+  446   148          12.5263185584         340.8586109558      A1        A1 (1)
+  447   375          12.5553391544         341.6483018771      B2        B2 (3)
+  448   149          12.6788176507         345.0083241008      A1        A1 (1)
+  449   245          12.8111027750         348.6079869651      B1        B1 (2)
+  450   376          12.9894890372         353.4621261316      B2        B2 (3)
+  451   377          24.7718930955         674.0777852604      B2        B2 (3)
+  452   150          24.8650572065         676.6129107497      A1        A1 (1)
+  453   151          25.2892378880         688.1554591220      A1        A1 (1)
+  454   378          25.3823222899         690.6884156167      B2        B2 (3)
+  455   152          26.8423202772         730.4169985694      A1        A1 (1)
+
+
+
+
+ACES ---SYSTEM--- (total sec) ----USER---- (total sec) -WALLCLOCK- (total sec)
+TIME   0: 5: 4.34 (    304.3)   0: 5: 8.05 (    308.1)   0:12:59.7 (    779.7)
+  Full RHF integral transformation
+  @dropvc: Length SCFEVECA                   455                  455               207025
+
+  The following   5 MOs will be dropped:
+     1         -11.2296690
+     2         -11.2274639
+     3         -11.2254116
+    12         -11.2268883
+    13         -11.2252562
+  There are 450 active molecular orbitals.
+
+  @vtran , ncomp, ndrop                   450                    5
+  process triiii, load1 
+  process triiii, load1 
+  process tfiijj, load2F 
+  process tfiijj, load2F 
+  process tfijij, load3F 
+  process tfijij, load3F 
+  process tfijij, load3F 
+  process tfijkl, load4f 
+
+
+ACES ---SYSTEM--- (total sec) ----USER---- (total sec) -WALLCLOCK- (total sec)
+TIME   0: 1:41.05 (    101.0)   0:41: 7.79 (   2467.8)   0:42:57.8 (   2577.8)
+
+
+ performing integral processing for standard CC
+  Processing integrals for CCSD calculation.
+  @GMOIAA-I, Processing MO integrals for spin case AA.
+  @GMOIAA-I, Generation of integral list completed.
+                      TYPE            NUMBER
+                      ----           --------
+                      PPPP          *********
+                      PPPH          136934009
+                      PPHH            4103122
+                      PHPH            2222352
+                      PHHH             135088
+                      HHHH               1222
+
+                     TOTAL          *********
+  I100 Is                411139   MEMSIZ IS             237161689
+  @DABCD0-I, Information for AO integral sort
+        Total available memory (words)          237356752.
+        Available memory for buckets (words)    237161689.
+        Distribution length (words)                101270.
+        Number of distributions                    190969.
+        Number which can be held in core             4683.
+        Number of sortfile buckets                     41.
+        Number of distributions per bucket           4658.
+        Number of integrals per bucket               2047.
+        Sortfile record length (bytes)              32768.
+        Total utilized memory (words)              411139.
+  @SABCD0-I, ******** PPPP integrals sorted.
+  @DABCD0-I, Sort chain processing uses  235861967 out of  237356752 words.
+  @CABCD0-I, Wrote     202540 symmetry blocked integrals to disk.
+
+  @FORMT2-I, Second-order MBPT correlation energies:
+              ----------------------------------------------
+              E(SCF)                = -192.868826972129 a.u.
+              E2(AA)                =   -0.100040632297 a.u.
+              E2(AB)                =   -0.656189430982 a.u.
+              E2(TOT)               =   -0.856270695576 a.u.
+              Total MBPT(2) energy  = -193.725097667705 a.u.
+              ----------------------------------------------
+   Largest T2 amplitudes for spin case AB:
+       _       _                 _       _                 _       _
+   i   j   a   b             i   j   a   b             i   j   a   b
+-----------------------------------------------------------------------------
+[ 13  13 157 157]-0.05931 [  8   8 157 157]-0.04738 [ 13  13 375 375]-0.04195
+[ 13   8 375 157] 0.03990 [  8  13 157 375] 0.03990 [  8   8 375 375]-0.02387
+[ 13  13 377 375] 0.02311 [ 13  13 375 377] 0.02311 [ 13   8 377 157]-0.02283
+[  8  13 157 377]-0.02283 [ 13  13 161 157] 0.02098 [ 13  13 157 161] 0.02098
+[  7   7 162 162]-0.02030 [ 13  13 376 376]-0.01732 [ 13  13 377 377]-0.01688
+-----------------------------------------------------------------------------
+   Norm of T2AB vector (  8200563 symmetry allowed elements):  0.4575699163.
+-----------------------------------------------------------------------------
+
+ Shannon Index =    3.3358394
+
+
+
+ACES ---SYSTEM--- (total sec) ----USER---- (total sec) -WALLCLOCK- (total sec)
+TIME   0:16:11.51 (    971.5)   0:10:58.92 (    658.9)   8: 7:31.1 (  29251.1)
+
+   ******************************************
+   *                                         *
+   *     ACES III Correlated Techniques      *
+   *                                         *
+   *              MBPT[2] / CCSD             *
+   *              EOMCC / STEOMCC            *
+   *        Internally contracted MRCC       *
+   *                                         *
+   *                                         *
+   *                Authors:                 *
+   *                                         *
+   *    Marcel Nooijen (principal design)    *
+   *                                         *
+   *    Sullivan Beck (general)              *
+   *    Steven R. Gwaltney (CC gradients)    *
+   *    Ajith Perera (miscellaneous)          *
+   *                                         *
+   *    Mark Wladyslawski (STEOM gradients)  *
+   *                                         *
+   *    Dominika Zgid (DMRG)                 *
+   *    Liguo Kong (SS-EOMCC)                *
+   *    K. R. Shamsundhar (GTCI)             *
+   *    Dipayan Datta (pIC-MRCC/MR-EOMCC)    *
+   *    Ondrej Demel  (pIC-MRCC/MR-EOMCC)    *
+   *                                         *
+   *******************************************
+
+ Version of ACES2, from 270 onwards    270
+  @nl_setmet: Original flag138:                     0
+  switch meaning of iflags2(138) 
+  used iflags2(138)                     1
+ 
+============================================================================
+NAMELIST: mrcc_gen
+             KEYWORD        TYPE                 VALUE               DEFAULT
+--------------------  ----------  --------------------  --------------------
+            print_nl     logical                  true
+   closed_shell_calc     element                  ccsd
+              do_apg     logical                 false
+           gcc_eom_s     logical                  true
+      Newton_Raphson     logical                 false
+        get_nonsense     logical                 false
+          do_fock_cc     logical                 false
+    analytic_diabats     logical                 false
+          add_ext_t1     logical                 false
+          add_ext_t2     logical                 false
+           sr_ndemel     logical                 false
+             Td_hbar     logical                 false
+            TTd_hbar     logical                 false
+        add_ext_hbar     logical                 false
+       pcc_hermitize     logical                 false
+     pcc_variational     logical                 false
+         cc_cumulant     logical                 false
+         vpcc_option     integer                     1
+     cumulant_option     integer                     1
+          vpcc_gamma        real            0.95000000
+        no_fock_t2r1     logical                 false
+            mod_diis     logical                 false
+               no_ci     logical                 false
+       weighted_diis     logical                  true
+         restrict_ph     logical                 false
+            read_mos     logical                 false
+      print_orbitals     logical                 false
+            reduce_u     logical                 false
+         reduce_hbar     logical                 false
+     reduce_u_bare_h     logical                 false
+   reduce_u_one_body     logical                 false
+      cc_extrapolate     logical                  true                 false
+   mreom_extrapolate     logical                 false
+          iGS_extrap     integer                     0
+            natocc_V     logical                  true                 false
+            natocc_E     logical                 false
+           natocc_CC     logical                 false
+         natocc_hbar     logical                 false
+       xp_mp2_natorb     logical                 false
+        xp_exact_fit     logical                 false                  true
+        xp_fit_nterm     integer                     3
+     xp_squares_only     logical                 false
+             xp_heff     logical                 false                  true
+             xp_eval     logical                  true                 false
+       xp_thresh_occ        real            0.00010000
+       xp_thresh_vrt        real            0.00010000
+  xp_min_disc_weight        real            0.01000000            0.00050000
+        xp_ip_thresh        real            0.01000000
+        xp_ea_thresh        real            0.01000000
+              ee_tda     logical                 false
+             dip_tda     logical                 false
+             dea_tda     logical                 false
+              ip_eom     logical                 false
+              ea_eom     logical                 false
+           act_eaeom     logical                 false
+              ee_eom     logical                 false
+             dip_eom     logical                 false
+             dea_eom     logical                 false
+            ee_steom     logical                 false
+           dip_steom     logical                 false
+           dea_steom     logical                 false
+           steom_orb     logical                 false
+    steom_thresh_occ        real            0.05000000
+    steom_thresh_vrt        real            0.05000000
+          steom_bruk     logical                 false
+            ai_shift        real            0.00000000
+            mi_shift        real            0.00000000
+          aaii_shift        real            0.00000000
+          amii_shift        real            0.00000000
+          aiii_shift        real            0.00000000
+          mmii_shift        real            0.00000000
+        epv_o_factor        real            0.00000000
+        epv_h_factor        real            0.00000000
+        epv_x_factor        real            0.00000000
+        epv_v_factor        real            0.00000000
+        epv_p_factor        real            0.00000000
+        epv_r_factor        real            0.00000000
+        epv_m_factor        real            0.00000000
+   exchange_symmetry     logical                 false
+     exchange_LM_sym     logical                 false
+        tcc_o_factor        real           -1.00000000
+        tcc_v_factor        real           -1.00000000
+      vaaii_t_factor        real            0.00000000
+         ph_v_factor        real            0.00000000
+        tcc_L_factor        real            0.00000000
+        tcc_M_factor        real            0.00000000
+        tcc_R_factor        real            0.00000000
+        tcc_D_factor        real            0.00000000
+        tcc_S_factor        real            0.00000000
+         ph_o_factor        real            0.00000000
+        pcc_o_factor        real           -1.00000000
+        pcc_v_factor        real           -1.00000000
+     renorm_o_factor        real           -1.00000000
+     renorm_v_factor        real            0.00000000
+    renorm_connected     logical                 false
+   non_linear_lambda     logical                 false
+        pcc_L_factor        real            0.00000000
+        pcc_M_factor        real            0.00000000
+        pcc_R_factor        real            1.00000000
+        pcc_H_factor        real            0.50000000
+        pcc_P_factor        real            0.50000000
+       pcc_HX_factor        real            0.50000000
+       pcc_PX_factor        real            0.50000000
+       pcc_RM_factor        real            1.00000000
+       pcc_RS_factor        real            1.00000000
+       pcc_RX_factor        real            0.00000000
+     pcc_sym_AB_ring     logical                 false
+      pcc_sym_T_ring     logical                 false
+      x_ring_triplet        real            0.50000000
+         pcc_hessian     logical                 false
+         epv_hessian     logical                 false
+         epv_project     logical                 false
+          epv_thresh        real            0.00010000
+          pcc_energy        real            0.00000000
+implicit_triples_fac        real            1.00000000
+              lambda     logical                 false
+             gp_diis     logical                 false
+           directdea     logical                  true
+         restrict_cc     logical                 false
+         restrict_ea     logical                 false
+       energ_triples     logical                  true
+        tmom_triples     logical                  true
+        prop_triples     logical                 false
+              tdavrt     logical                 false
+              tdaocc     logical                 false
+            tdasteom     logical                 false
+             ff_type     element                  none
+            ff_field     element                  none
+            ff_value        real            0.00005000
+          mcscf_calc     element                  none
+            gtci_pop          integer_list                     0
+              getall     logical                 false
+               debug     logical                 false
+              minmem     logical                 false
+             minmem2     logical                 false
+  numerical_gradient     element                  none
+       gradient_type     element                  none
+        follow_state     logical                  true
+        isc_crossing     element                  none
+         reduce_disk     logical                 false
+              ip_low        real          -20.00000000          -99.00000000
+             ip_high        real           99.00000000
+              ea_low        real          -99.00000000
+             ea_high        real           10.00000000          -99.00000000
+              cc_low        real          -99.00000000
+             cc_high        real          -99.00000000
+                 nip     integer                    -1
+                 nea     integer                    -1
+            heff_low        real          -20.00000000
+           heff_high        real           99.00000000
+      grad_num_mreom     logical                 false
+      grad_ana_mreom     logical                 false
+          grad_lin_S     logical                 false
+       prep_magnetic     logical                 false
+     local_group_mos     logical                 false
+============================================================================
+ 
+  @setmet: dowai set to false 
+  lwiaaa different from lviaaa
+  @aceslist: lwaaaa different from lvaaaa
+ @initmrcc: after aceslist
+
+  @delfile , file                     4 , DERINT will be deleted
+
+  Number of AO basis functions                   455
+  @GETREC: record length mismatch for record SCFEVECA
+           Actual: 207025  Requested: 204750
+  @modlistaces: Move lvaaaa to file MOINTS
+
+  @delfile , file                     3 , MOABCD will be deleted
+
+ @initmrcc: after modlistaces
+  one-electron H and S not read
+  @GETREC: record length mismatch for record SCFEVECA
+           Actual: 207025  Requested: 204750
+  @GETREC: record length mismatch for record SCFEVECA
+           Actual: 207025  Requested: 204750
+  @GETREC: record length mismatch for record SCFEVECA
+           Actual: 207025  Requested: 204750
+  Dipole moments        x [2]        y [3]        z [1]
+    Nuclear          0.0000        0.0000        1.2286
+   Reference        -0.0000        0.0000        0.1504
+
+  antisymmetrize integrals    AMZ  
+  @GETREC: record length mismatch for record SCFEVECA
+           Actual: 207025  Requested: 204750
+  Magnetic dipoles properly antisymmetric 
+  antisymmetrize integrals    AMY  
+  @GETREC: record length mismatch for record SCFEVECA
+           Actual: 207025  Requested: 204750
+  Magnetic dipoles properly antisymmetric 
+  property integrals do not have definite symmetry
+  Something is wrong
+  xnorm in detsymprop
+
+                 column   1
+ row   1   1110.15549785118
+ row   2  *****************
+ row   3      0.00000000000
+ row   4      0.00000000002
+  antisymmetrize integrals    AMX  
+  @GETREC: record length mismatch for record SCFEVECA
+           Actual: 207025  Requested: 204750
+  Magnetic dipoles properly antisymmetric 
+  property integrals do not have definite symmetry
+  Something is wrong
+  xnorm in detsymprop
+
+                 column   1
+ row   1  20761.27020774235
+ row   2      0.00000000000
+ row   3  *****************
+ row   4      0.00000000001
+  @GETREC: record length mismatch for record SCFEVECA
+           Actual: 207025  Requested: 204750
+  @GETREC: record length mismatch for record SCFEVECA
+           Actual: 207025  Requested: 204750
+  property integrals do not have definite symmetry
+  Something is wrong
+  xnorm in detsymprop
+
+                 column   1
+ row   1    451.33441841228
+ row   2      0.00000000000
+ row   3  *****************
+ row   4      0.00000000000
+  @GETREC: record length mismatch for record SCFEVECA
+           Actual: 207025  Requested: 204750
+  Magnetic moments          Mxy [4]        Mxz [1]        Myz [1]
+  reference [mag]         -0.00         -0.00          0.00
+  Dipole Velocity           Vx [2]        Vy [1]        Vz [1]
+   reference [Vx]          0.00          0.00          0.00
+  @GETREC: record length mismatch for record SCFEVECA
+           Actual: 207025  Requested: 204750
+  @GETREC: record length mismatch for record SCFEVECA
+           Actual: 207025  Requested: 204750
+  @GETREC: record length mismatch for record SCFEVECA
+           Actual: 207025  Requested: 204750
+  @GETREC: record length mismatch for record SCFEVECA
+           Actual: 207025  Requested: 204750
+  @GETREC: record length mismatch for record SCFEVECA
+           Actual: 207025  Requested: 204750
+  @GETREC: record length mismatch for record SCFEVECA
+           Actual: 207025  Requested: 204750
+  Second moments          xx [1]        yy [1]        zz [1]        xy [4]        xz [2]        yz [3]
+  reference [el.]         30.62        151.92        150.88          0.00         -0.00          0.00
+
+  Table of degeneracies 
+
+                     1  2  3  4
+
+           1         1  0  0  0
+           2         0  1  0  0
+           3         0  0  1  0
+           4         0  0  0  1
+
+
+  Summary of molecular orbitals between -20.0 and 15.0 eV 
+
+------------------------------------------------------------------------------
+   orb.  symm.   eigenvalue      <xx>           <yy>           <zz>
+------------------------------------------------------------------------------
+
+  Occupied orbitals in closed shell vacuum
+
+   -3    [1]      -18.86         0.691          7.133          5.200
+   -2    [1]      -14.31         0.683          5.001          4.687
+   -1    [1]      -13.82         0.782          3.685          7.156
+   -2    [2]      -16.10         2.686          1.301          7.499
+   -1    [2]      -11.21         2.551          2.751          4.639
+   -3    [3]      -19.74         0.680          6.696          5.740
+   -2    [3]      -15.18         0.553          7.310          4.681
+   -1    [3]      -13.67         0.565          6.244          4.016
+   -1    [4]       -8.30         2.490          5.529          1.875
+
+  Virtual orbitals w.r.t. closed shell vacuum
+
+    1    [1]        3.25         8.274         17.222         19.095
+    2    [1]        3.92         5.621         13.378         30.233
+    3    [1]        4.70         6.087         28.781         13.240
+    4    [1]        6.37         6.299         10.183         16.259
+    5    [1]        7.85         3.850         12.618         19.437
+    6    [1]        9.00         3.685         12.892         17.635
+    7    [1]        9.74         7.470          5.509          8.650
+    8    [1]       12.20         3.657         16.232         12.412
+    9    [1]       13.11         6.669         12.828         16.044
+   10    [1]       13.44         6.707         11.121         10.490
+   11    [1]       13.63         5.972         13.094          8.373
+   12    [1]       14.55         6.781          7.696         13.332
+    1    [2]        3.15         3.738          5.061          6.094
+    2    [2]        4.72        13.967          6.360         22.478
+    3    [2]        9.15        10.149          6.097          8.136
+    4    [2]       11.35         9.834          9.489          5.483
+    5    [2]       11.71        10.504          5.480         11.346
+    6    [2]       14.05         6.925          4.532         13.299
+    1    [3]        3.94         3.992         35.715         11.488
+    2    [3]        4.66         3.504         24.095         26.384
+    3    [3]        7.02         3.381         18.637         18.331
+    4    [3]        8.15         3.169         17.388         12.256
+    5    [3]       10.47         8.847          9.986          4.703
+    6    [3]       12.57         3.266         18.658         19.176
+    7    [3]       13.05         3.061         16.870         19.665
+    8    [3]       13.52         2.837         23.495          7.402
+    9    [3]       14.08         2.916         12.619         12.467
+   10    [3]       14.80         7.664          8.998          8.903
+    1    [4]        5.81         4.797          7.152          6.609
+    2    [4]        9.81         9.942         10.909          4.663
+    3    [4]       12.93         7.724          8.755          8.790
+------------------------------------------------------------------------------
+
+  nl_initeom eomconv                     5
+  nl_initeom eomconv                     5
+  nl_initeom eomconv                     5
+  @detactive read: EASYM_A 
+       0    0    0    0
+
+  All  virtual orbitals between      2.88 and     10.00 eV are considered active
+  Number of active virtual  orbitals per irrep
+     7 [1]   3 [2]   4 [3]   2 [4] 
+  @detactive read: IPSYM_A 
+       0    0    0    0
+
+  All occupied orbitals between    -20.00 and     99.00 eV are considered active
+  Number of active occupied orbitals per irrep
+     3 [1]   2 [2]   3 [3]   1 [4] 
+ @bruecklist : os_ccsd, doip, doea do_gcc F F F F
+  Enter bruecklist 
+  @bruecklist, ldensii, ldensiiii :                   59                   58
+  @initmrcc: after bruecklist
+  Total number of orbitals                   455
+
+ Memory used as scr space         472095820
+ Left over memory as pseudo-disk    3000000
+
+ Total amount of memory           475095833
+
+  Lengths of typical 4-index arrays
+
+ Particle-Hole type :iiii, Maximum length     7761
+ Particle-Hole type :aiii, Maximum length   249064
+ Particle-Hole type :aaii, Maximum length  8200563
+ Particle-Hole type :aaa1, Maximum length 21143993
+ Particle-Hole type :aai1, Maximum length   639936
+  @initmrcc: return
+
+ Final addresses in icore: i_int, iscr, ineeded-imax
+              27850636            30850636                1013
+ 
+============================================================================
+NAMELIST: g_extensivity
+             KEYWORD        TYPE                 VALUE               DEFAULT
+--------------------  ----------  --------------------  --------------------
+            print_nl     logical                  true
+               icase     integer                     0
+            irreps_a          integer_list                     0
+============================================================================
+ 
+  continue after mcscf-calculation                     6
+  @xp_heff: low-accuracy (MP2) calculation 
+  Canonical low-accuracy amplitudes 
+
+  Single excitation coefficients
+      a  [irrep]     i  [irrep]  
+
+      7    [1],     -3    [1]   ;                  0.0051008437
+      8    [1],     -3    [1]   ;                 -0.0095289531
+      1    [2],     -2    [2]   ;                  0.0091647409
+      6    [2],     -2    [2]   ;                 -0.0059377673
+      1    [2],     -1    [2]   ;                 -0.0115580341
+      3    [2],     -1    [2]   ;                 -0.0109435140
+      7    [2],     -1    [2]   ;                  0.0072173451
+     16    [2],     -1    [2]   ;                 -0.0096257293
+      7    [3],     -3    [3]   ;                 -0.0046893080
+      8    [3],     -2    [3]   ;                 -0.0046942767
+      3    [3],     -1    [3]   ;                 -0.0058267294
+     11    [3],     -1    [3]   ;                  0.0047932216
+      1    [4],     -1    [4]   ;                 -0.0064238512
+      2    [4],     -1    [4]   ;                 -0.0181594068
+      4    [4],     -1    [4]   ;                  0.0052457480
+      5    [4],     -1    [4]   ;                 -0.0063153868
+      6    [4],     -1    [4]   ;                  0.0048720869
+      7    [4],     -1    [4]   ;                  0.0055624569
+     10    [4],     -1    [4]   ;                 -0.0076024603
+     12    [4],     -1    [4]   ;                 -0.0110845720
+
+  Double excitation coefficients
+      a  [irrep]     a  [irrep]     i  [irrep]     i  [irrep]  
+
+      6    [2],      6    [2]   ;  -2    [2]      -2    [2]         -0.0202984789
+      1    [2],      1    [2]   ;  -1    [2]      -1    [2]         -0.0473847800
+      1    [4],      1    [4]   ;  -1    [2]      -1    [2]         -0.0238734375
+      1    [4],      3    [4]   ;  -1    [2]      -1    [2]          0.0154477164
+      1    [2],      1    [2]   ;  -1    [4]      -1    [4]         -0.0593148306
+      1    [2],      5    [2]   ;  -1    [4]      -1    [4]          0.0209751982
+      1    [2],      6    [2]   ;  -1    [4]      -1    [4]         -0.0160489299
+      1    [4],      1    [4]   ;  -1    [4]      -1    [4]         -0.0419489344
+      2    [4],      2    [4]   ;  -1    [4]      -1    [4]         -0.0173214895
+      1    [4],      3    [4]   ;  -1    [4]      -1    [4]          0.0231095112
+      3    [4],      3    [4]   ;  -1    [4]      -1    [4]         -0.0168802666
+      1    [4],      1    [2]   ;  -1    [2]      -1    [4]          0.0154491836
+      1    [2],      1    [4]   ;  -1    [2]      -1    [4]          0.0398978876
+      1    [2],      3    [4]   ;  -1    [2]      -1    [4]         -0.0228319045
+
+  Low Accuracy Correlation energies (S, T1^2, T2  Total) -0.00000000  0.00030981 -0.85627070 -0.85596088
+  Vacuum state energy            -192.8688269721294
+  Total low-accuracy correlated energy        -193.7247878558263
+  New Eigenvalues in irrep                     1
+
+                 column   1
+ row   1     -0.36398647954
+ row   2     -0.34533731641
+ row   3     -0.31040220879
+ row   4     -0.25545643122
+ row   5     -0.23274414653
+ row   6     -0.22174345479
+  New Eigenvalues in irrep                     2
+
+                 column   1
+ row   1     -0.28428045608
+ row   2     -0.26564782917
+  New Eigenvalues in irrep                     3
+
+                 column   1
+ row   1     -0.36122138699
+ row   2     -0.34295218579
+ row   3     -0.25446258562
+ row   4     -0.23237528956
+  New Eigenvalues in irrep                     4
+
+                 column   1
+ row   1     -0.29855051365
+  New Eigenvalues in irrep                     1
+
+                 column   1
+ row   1     -0.10629984058
+ row   2     -0.10218358796
+ row   3     -0.08734474065
+ row   4     -0.07468861042
+ row   5     -0.07221681151
+ row   6     -0.06588879618
+ row   7     -0.06207463314
+ row   8     -0.05669498228
+ row   9     -0.05285876572
+ row  10     -0.04774687524
+ row  11     -0.03745547731
+ row  12     -0.03316041938
+ row  13     -0.03163110412
+ row  14     -0.02966076021
+ row  15     -0.02535021230
+ row  16     -0.02301545288
+ row  17     -0.02181121340
+ row  18     -0.02154692720
+ row  19     -0.02020994978
+ row  20     -0.01897493486
+ row  21     -0.01691002393
+ row  22     -0.01571865319
+ row  23     -0.01490508941
+ row  24     -0.01441002261
+ row  25     -0.01382354169
+ row  26     -0.01236417310
+ row  27     -0.01186273286
+ row  28     -0.01096910349
+ row  29     -0.01015245106
+ row  30     -0.00990222372
+ row  31     -0.00946213404
+ row  32     -0.00883076921
+ row  33     -0.00871616425
+ row  34     -0.00825532605
+ row  35     -0.00797731750
+ row  36     -0.00773584712
+ row  37     -0.00708475355
+ row  38     -0.00662804788
+ row  39     -0.00643998155
+ row  40     -0.00609686654
+ row  41     -0.00579441449
+ row  42     -0.00550416763
+ row  43     -0.00504587301
+ row  44     -0.00487822660
+ row  45     -0.00474129104
+ row  46     -0.00463753652
+ row  47     -0.00450515591
+ row  48     -0.00434520964
+ row  49     -0.00415071941
+ row  50     -0.00396501108
+ row  51     -0.00392473795
+ row  52     -0.00379999540
+ row  53     -0.00359188080
+ row  54     -0.00350999340
+ row  55     -0.00330923791
+ row  56     -0.00329119374
+ row  57     -0.00327963651
+ row  58     -0.00311858614
+ row  59     -0.00302830531
+ row  60     -0.00287776253
+ row  61     -0.00277159786
+ row  62     -0.00267874666
+ row  63     -0.00263690333
+ row  64     -0.00258715763
+ row  65     -0.00235709751
+ row  66     -0.00231232699
+ row  67     -0.00223227254
+ row  68     -0.00218501397
+ row  69     -0.00206857831
+ row  70     -0.00202690497
+ row  71     -0.00194439539
+ row  72     -0.00188002540
+ row  73     -0.00177686894
+ row  74     -0.00170953004
+ row  75     -0.00166400328
+ row  76     -0.00163287063
+ row  77     -0.00145605215
+ row  78     -0.00144060577
+ row  79     -0.00139403376
+ row  80     -0.00136691887
+ row  81     -0.00130275559
+ row  82     -0.00124008963
+ row  83     -0.00118771956
+ row  84     -0.00116953357
+ row  85     -0.00111860772
+ row  86     -0.00108062055
+ row  87     -0.00096261928
+ row  88     -0.00092999149
+ row  89     -0.00092233892
+ row  90     -0.00084830221
+ row  91     -0.00078874132
+ row  92     -0.00076478632
+ row  93     -0.00070868739
+ row  94     -0.00068962411
+ row  95     -0.00065683486
+ row  96     -0.00064274603
+ row  97     -0.00062174818
+ row  98     -0.00055985018
+ row  99     -0.00053587535
+ row 100     -0.00051200377
+ row 101     -0.00049353379
+ row 102     -0.00048115055
+ row 103     -0.00047124477
+ row 104     -0.00045368767
+ row 105     -0.00044245776
+ row 106     -0.00042188611
+ row 107     -0.00039559105
+ row 108     -0.00037794163
+ row 109     -0.00037005167
+ row 110     -0.00034912214
+ row 111     -0.00032935842
+ row 112     -0.00031988536
+ row 113     -0.00029459545
+ row 114     -0.00029077716
+ row 115     -0.00026847057
+ row 116     -0.00025104240
+ row 117     -0.00024122852
+ row 118     -0.00021348842
+ row 119     -0.00020942844
+ row 120     -0.00019496558
+ row 121     -0.00016589845
+ row 122     -0.00014347086
+ row 123     -0.00011753095
+ row 124     -0.00010696769
+ row 125     -0.00009936782
+ row 126     -0.00008751245
+ row 127     -0.00007445566
+ row 128     -0.00006288483
+ row 129     -0.00005670825
+ row 130     -0.00005572304
+ row 131     -0.00004766872
+ row 132     -0.00003704969
+ row 133     -0.00003605746
+ row 134     -0.00003262038
+ row 135     -0.00003127625
+ row 136     -0.00002708368
+ row 137     -0.00002272180
+ row 138     -0.00001866929
+ row 139     -0.00000931033
+ row 140     -0.00000769689
+ row 141     -0.00000579070
+ row 142     -0.00000414744
+ row 143     -0.00000320892
+  New Eigenvalues in irrep                     2
+
+                 column   1
+ row   1     -0.11170239948
+ row   2     -0.07463097972
+ row   3     -0.06065079275
+ row   4     -0.05598652904
+ row   5     -0.04807292130
+ row   6     -0.03376591445
+ row   7     -0.03241167846
+ row   8     -0.02759738211
+ row   9     -0.02063732612
+ row  10     -0.01974550527
+ row  11     -0.01839841208
+ row  12     -0.01609477643
+ row  13     -0.01567866992
+ row  14     -0.01396429178
+ row  15     -0.01210996004
+ row  16     -0.01136260509
+ row  17     -0.00984532600
+ row  18     -0.00920166164
+ row  19     -0.00876123688
+ row  20     -0.00786232233
+ row  21     -0.00717932409
+ row  22     -0.00692225843
+ row  23     -0.00636349369
+ row  24     -0.00595706052
+ row  25     -0.00572868506
+ row  26     -0.00527986851
+ row  27     -0.00502984226
+ row  28     -0.00467980604
+ row  29     -0.00461060618
+ row  30     -0.00413889840
+ row  31     -0.00403943111
+ row  32     -0.00398820490
+ row  33     -0.00377896051
+ row  34     -0.00355210965
+ row  35     -0.00329203188
+ row  36     -0.00295536265
+ row  37     -0.00276779966
+ row  38     -0.00270785869
+ row  39     -0.00251500072
+ row  40     -0.00240162282
+ row  41     -0.00223799108
+ row  42     -0.00216928120
+ row  43     -0.00207542482
+ row  44     -0.00205212524
+ row  45     -0.00191643451
+ row  46     -0.00188229582
+ row  47     -0.00183441084
+ row  48     -0.00178707310
+ row  49     -0.00165515761
+ row  50     -0.00158141096
+ row  51     -0.00155667806
+ row  52     -0.00148347104
+ row  53     -0.00123917041
+ row  54     -0.00117030258
+ row  55     -0.00105357120
+ row  56     -0.00098130182
+ row  57     -0.00084343022
+ row  58     -0.00079712770
+ row  59     -0.00074143278
+ row  60     -0.00067677682
+ row  61     -0.00066983665
+ row  62     -0.00063225366
+ row  63     -0.00061304600
+ row  64     -0.00059211941
+ row  65     -0.00057146420
+ row  66     -0.00053125801
+ row  67     -0.00048451019
+ row  68     -0.00047861498
+ row  69     -0.00046073660
+ row  70     -0.00044729395
+ row  71     -0.00042898020
+ row  72     -0.00039069161
+ row  73     -0.00038408251
+ row  74     -0.00036783506
+ row  75     -0.00034897687
+ row  76     -0.00029642040
+ row  77     -0.00029586913
+ row  78     -0.00028682974
+ row  79     -0.00026736939
+ row  80     -0.00024500834
+ row  81     -0.00020372986
+ row  82     -0.00016245261
+ row  83     -0.00010593823
+ row  84     -0.00010426008
+ row  85     -0.00009235956
+ row  86     -0.00005557833
+ row  87     -0.00004571527
+ row  88     -0.00004141668
+ row  89     -0.00002853764
+ row  90     -0.00002293261
+ row  91     -0.00000786658
+  New Eigenvalues in irrep                     3
+
+                 column   1
+ row   1     -0.10482961923
+ row   2     -0.10332392982
+ row   3     -0.08832641573
+ row   4     -0.07582631622
+ row   5     -0.07221608355
+ row   6     -0.06180907104
+ row   7     -0.05619266315
+ row   8     -0.05085101349
+ row   9     -0.03527082407
+ row  10     -0.03350085159
+ row  11     -0.03117765100
+ row  12     -0.02602937846
+ row  13     -0.02416245584
+ row  14     -0.02302899154
+ row  15     -0.02114266519
+ row  16     -0.01991006453
+ row  17     -0.01758459976
+ row  18     -0.01658436745
+ row  19     -0.01409954221
+ row  20     -0.01363573809
+ row  21     -0.01295597895
+ row  22     -0.01180752070
+ row  23     -0.01130062701
+ row  24     -0.01033621540
+ row  25     -0.00974172020
+ row  26     -0.00929828507
+ row  27     -0.00868662170
+ row  28     -0.00858778562
+ row  29     -0.00798845039
+ row  30     -0.00780085121
+ row  31     -0.00735815359
+ row  32     -0.00677528313
+ row  33     -0.00653584355
+ row  34     -0.00639092978
+ row  35     -0.00606199136
+ row  36     -0.00591150112
+ row  37     -0.00527651622
+ row  38     -0.00485004315
+ row  39     -0.00470825153
+ row  40     -0.00439817075
+ row  41     -0.00432450258
+ row  42     -0.00412932074
+ row  43     -0.00403954755
+ row  44     -0.00380534987
+ row  45     -0.00357790958
+ row  46     -0.00342010181
+ row  47     -0.00331592306
+ row  48     -0.00321951240
+ row  49     -0.00308333621
+ row  50     -0.00293528370
+ row  51     -0.00288231413
+ row  52     -0.00275513775
+ row  53     -0.00267484513
+ row  54     -0.00255143392
+ row  55     -0.00252499688
+ row  56     -0.00238532726
+ row  57     -0.00232800612
+ row  58     -0.00223747012
+ row  59     -0.00215566226
+ row  60     -0.00191581975
+ row  61     -0.00186261506
+ row  62     -0.00183827427
+ row  63     -0.00180628428
+ row  64     -0.00175340973
+ row  65     -0.00168771273
+ row  66     -0.00160902315
+ row  67     -0.00154788674
+ row  68     -0.00144772458
+ row  69     -0.00137353721
+ row  70     -0.00133696697
+ row  71     -0.00123528002
+ row  72     -0.00117124653
+ row  73     -0.00114178149
+ row  74     -0.00102398030
+ row  75     -0.00100095699
+ row  76     -0.00096651294
+ row  77     -0.00089980736
+ row  78     -0.00085006825
+ row  79     -0.00083087364
+ row  80     -0.00078375930
+ row  81     -0.00076166194
+ row  82     -0.00072219932
+ row  83     -0.00066911348
+ row  84     -0.00063250581
+ row  85     -0.00059735162
+ row  86     -0.00057147222
+ row  87     -0.00053385046
+ row  88     -0.00050240590
+ row  89     -0.00048843529
+ row  90     -0.00047042376
+ row  91     -0.00045696187
+ row  92     -0.00042743878
+ row  93     -0.00041592237
+ row  94     -0.00040009025
+ row  95     -0.00038346378
+ row  96     -0.00035383684
+ row  97     -0.00033485787
+ row  98     -0.00031594254
+ row  99     -0.00029924349
+ row 100     -0.00029808350
+ row 101     -0.00028472373
+ row 102     -0.00024761139
+ row 103     -0.00023148933
+ row 104     -0.00021327395
+ row 105     -0.00020240361
+ row 106     -0.00018098404
+ row 107     -0.00016465584
+ row 108     -0.00014533941
+ row 109     -0.00012211321
+ row 110     -0.00010428731
+ row 111     -0.00008735876
+ row 112     -0.00007370274
+ row 113     -0.00006736130
+ row 114     -0.00005324327
+ row 115     -0.00004893040
+ row 116     -0.00004655390
+ row 117     -0.00004063188
+ row 118     -0.00003715572
+ row 119     -0.00003358163
+ row 120     -0.00002863039
+ row 121     -0.00002194850
+ row 122     -0.00001542263
+ row 123     -0.00000918632
+ row 124     -0.00000803257
+ row 125     -0.00000450954
+ row 126     -0.00000290017
+ row 127     -0.00000238470
+  New Eigenvalues in irrep                     4
+
+                 column   1
+ row   1     -0.09867158966
+ row   2     -0.06067008753
+ row   3     -0.05500967552
+ row   4     -0.03445813404
+ row   5     -0.03181678845
+ row   6     -0.02824529748
+ row   7     -0.02316145512
+ row   8     -0.01845409256
+ row   9     -0.01743935885
+ row  10     -0.01349400283
+ row  11     -0.01221460983
+ row  12     -0.01063329397
+ row  13     -0.00944640608
+ row  14     -0.00884449931
+ row  15     -0.00788596517
+ row  16     -0.00764623864
+ row  17     -0.00705292700
+ row  18     -0.00688557144
+ row  19     -0.00613096645
+ row  20     -0.00582660275
+ row  21     -0.00493875975
+ row  22     -0.00488315032
+ row  23     -0.00448082872
+ row  24     -0.00410793309
+ row  25     -0.00374541897
+ row  26     -0.00370392664
+ row  27     -0.00347127182
+ row  28     -0.00308665321
+ row  29     -0.00300502870
+ row  30     -0.00272544613
+ row  31     -0.00266317032
+ row  32     -0.00240688649
+ row  33     -0.00229144312
+ row  34     -0.00216869643
+ row  35     -0.00209968660
+ row  36     -0.00203601373
+ row  37     -0.00187104790
+ row  38     -0.00183043922
+ row  39     -0.00175464942
+ row  40     -0.00167414326
+ row  41     -0.00162824106
+ row  42     -0.00147394029
+ row  43     -0.00144392754
+ row  44     -0.00131721789
+ row  45     -0.00113776820
+ row  46     -0.00108096163
+ row  47     -0.00095494376
+ row  48     -0.00079154417
+ row  49     -0.00072556931
+ row  50     -0.00071066972
+ row  51     -0.00066525144
+ row  52     -0.00065584567
+ row  53     -0.00063953226
+ row  54     -0.00054490745
+ row  55     -0.00053500311
+ row  56     -0.00050088811
+ row  57     -0.00048258730
+ row  58     -0.00044775708
+ row  59     -0.00043895793
+ row  60     -0.00043155312
+ row  61     -0.00040055317
+ row  62     -0.00038435599
+ row  63     -0.00034650580
+ row  64     -0.00033215454
+ row  65     -0.00032188920
+ row  66     -0.00028964265
+ row  67     -0.00023494301
+ row  68     -0.00021197532
+ row  69     -0.00018255675
+ row  70     -0.00013896291
+ row  71     -0.00009697431
+ row  72     -0.00006889970
+ row  73     -0.00006058039
+ row  74     -0.00005188338
+ row  75     -0.00004354165
+ row  76     -0.00002434899
+
+  Solve CCSD Equations 
+ fillh0_b, ph2, shift2   ai         0.0000
+ fillh0_b, ph4, shift4   aaii         0.0000
+  diis_size 2                    90                    1
+  diis_size 3                    46                 1625
+  weighted diis parameters                     2
+ wdiis sector     1 offset          0 dimension       1624
+ wdiis sector     2 offset       1624 dimension    8200563
+  nsize_diis :               8202187
+  initialize diis_size, brueckner =  F
+  The following lists are included in the diis vector 
+                    2  included
+                    3  included
+ fillh0_b, ph2, shift2   ai         0.0000
+ fillh0_b, ph4, shift4   aaii         0.0000
+  singles   T
+  linear    F
+  do_gcc    F
+  do_apg    F
+  gcc_singles  F
+  mbpt2     F
+  bruk_converg    1.0000000000000005E-004
+  set initial t2 to zero 
+  linear, singles  F T
+  ccsd_iter xcisd F T   1.0000000000000000        1.0000000000000000     
+
+  @solveccsd : iteration                     1
+  Correlation energies (S, D, S+D) -0.00000000 -0.85627070 -0.85627070
+  Maximum residuals     0.289E-09     0.593E-01
+  linear, singles  F T
+  ccsd_iter xcisd F T   1.0000000000000000        1.0000000000000000     
+
+  @solveccsd : iteration                     2
+  Correlation energies (S, D, S+D) -0.00000000 -0.85107019 -0.85107019
+  Maximum residuals     0.182E-01     0.659E-02
+  linear, singles  F T
+  ccsd_iter xcisd F T   1.0000000000000000        1.0000000000000000     
+
+  @solveccsd : iteration                     3
+  Correlation energies (S, D, S+D) -0.00000000 -0.87435354 -0.87435354
+  Maximum residuals     0.154E-02     0.110E-01
+  linear, singles  F T
+  ccsd_iter xcisd F T   1.0000000000000000        1.0000000000000000     
+
+  @solveccsd : iteration                     4
+  Correlation energies (S, D, S+D) -0.00000000 -0.87741733 -0.87741733
+  Maximum residuals     0.275E-02     0.347E-02
+  linear, singles  F T
+  ccsd_iter xcisd F T   1.0000000000000000        1.0000000000000000     
+
+  @solveccsd : iteration                     5
+  Correlation energies (S, D, S+D) -0.00000000 -0.87722591 -0.87722591
+  Maximum residuals     0.518E-03     0.199E-02
+  linear, singles  F T
+  ccsd_iter xcisd F T   1.0000000000000000        1.0000000000000000     
+
+  @solveccsd : iteration                     6
+  Correlation energies (S, D, S+D) -0.00000000 -0.87730183 -0.87730183
+  Maximum residuals     0.395E-03     0.594E-03
+  linear, singles  F T
+  ccsd_iter xcisd F T   1.0000000000000000        1.0000000000000000     
+
+  @solveccsd : iteration                     7
+  Correlation energies (S, D, S+D) -0.00000000 -0.87730401 -0.87730401
+  Maximum residuals     0.427E-04     0.195E-03
+  linear, singles  F T
+  ccsd_iter xcisd F T   1.0000000000000000        1.0000000000000000     
+
+  @solveccsd : iteration                     8
+  Correlation energies (S, D, S+D) -0.00000000 -0.87729744 -0.87729744
+  Maximum residuals     0.522E-04     0.545E-04
+  linear, singles  F T
+  ccsd_iter xcisd F T   1.0000000000000000        1.0000000000000000     
+
+  @solveccsd : iteration                     9
+  Correlation energies (S, D, S+D) -0.00000000 -0.87730483 -0.87730483
+  Maximum residuals     0.204E-04     0.223E-04
+  linear, singles  F T
+  ccsd_iter xcisd F T   1.0000000000000000        1.0000000000000000     
+
+  @solveccsd : iteration                    10
+  Correlation energies (S, D, S+D) -0.00000000 -0.87730700 -0.87730700
+  Maximum residuals     0.148E-04     0.553E-05
+  linear, singles  F T
+  ccsd_iter xcisd F T   1.0000000000000000        1.0000000000000000     
+
+  @solveccsd : iteration                    11
+  Correlation energies (S, D, S+D) -0.00000000 -0.87730829 -0.87730829
+  Maximum residuals     0.776E-05     0.187E-05
+  linear, singles  F T
+  ccsd_iter xcisd F T   1.0000000000000000        1.0000000000000000     
+
+  @solveccsd : iteration                    12
+  Correlation energies (S, D, S+D) -0.00000000 -0.87730851 -0.87730851
+  Maximum residuals     0.197E-05     0.109E-05
+  linear, singles  F T
+  ccsd_iter xcisd F T   1.0000000000000000        1.0000000000000000     
+
+  @solveccsd : iteration                    13
+  Correlation energies (S, D, S+D) -0.00000000 -0.87730863 -0.87730863
+  Maximum residuals     0.156E-05     0.568E-06
+  linear, singles  F T
+  ccsd_iter xcisd F T   1.0000000000000000        1.0000000000000000     
+
+  @solveccsd : iteration                    14
+  Correlation energies (S, D, S+D) -0.00000000 -0.87730867 -0.87730867
+  Maximum residuals     0.197E-06     0.350E-06
+  linear, singles  F T
+  ccsd_iter xcisd F T   1.0000000000000000        1.0000000000000000     
+
+  @solveccsd : iteration                    15
+  Correlation energies (S, D, S+D) -0.00000000 -0.87730869 -0.87730869
+  Maximum residuals     0.126E-06     0.161E-06
+  linear, singles  F T
+  ccsd_iter xcisd F T   1.0000000000000000        1.0000000000000000     
+
+  @solveccsd : iteration                    16
+  Correlation energies (S, D, S+D) -0.00000000 -0.87730869 -0.87730869
+  Maximum residuals     0.289E-07     0.887E-07
+
+  Convergence reached after  16 cycles
+
+  Correlation energies (S, D, S+D) -0.00000000 -0.87730869 -0.87730869
+  Vacuum state energy            -192.8688269721294
+  Total correlated energy        -193.7461356638554
+  Maximum residuals     0.289E-07     0.887E-07
+
+  Single excitation coefficients
+      a  [irrep]     i  [irrep]  
+
+      7    [1],     -3    [1]   ;                  0.0051066359
+      8    [1],     -3    [1]   ;                 -0.0092985107
+      5    [1],     -2    [1]   ;                  0.0052137577
+      1    [2],     -2    [2]   ;                  0.0105943246
+      6    [2],     -2    [2]   ;                 -0.0059558065
+      1    [2],     -1    [2]   ;                 -0.0135262644
+      3    [2],     -1    [2]   ;                 -0.0144305880
+      7    [2],     -1    [2]   ;                  0.0100742788
+     12    [2],     -1    [2]   ;                 -0.0051101946
+     16    [2],     -1    [2]   ;                 -0.0106024264
+      3    [3],     -1    [3]   ;                 -0.0079672916
+     11    [3],     -1    [3]   ;                  0.0064661609
+      1    [4],     -1    [4]   ;                 -0.0075318158
+      2    [4],     -1    [4]   ;                 -0.0242546028
+      4    [4],     -1    [4]   ;                  0.0064520647
+      5    [4],     -1    [4]   ;                 -0.0078442720
+      6    [4],     -1    [4]   ;                  0.0060539446
+      7    [4],     -1    [4]   ;                  0.0067881419
+     10    [4],     -1    [4]   ;                 -0.0093397136
+     12    [4],     -1    [4]   ;                 -0.0118223349
+
+  Double excitation coefficients
+      a  [irrep]     a  [irrep]     i  [irrep]     i  [irrep]  
+
+      6    [2],      6    [2]   ;  -2    [2]      -2    [2]         -0.0240126207
+      1    [2],      1    [2]   ;  -1    [2]      -1    [2]         -0.0480251747
+      1    [4],      1    [4]   ;  -1    [2]      -1    [2]         -0.0325249640
+      1    [4],      3    [4]   ;  -1    [2]      -1    [2]          0.0210125370
+      1    [2],      1    [2]   ;  -1    [4]      -1    [4]         -0.0840490414
+      1    [2],      5    [2]   ;  -1    [4]      -1    [4]          0.0282090529
+      1    [2],      6    [2]   ;  -1    [4]      -1    [4]         -0.0194649039
+      1    [4],      1    [4]   ;  -1    [4]      -1    [4]         -0.0426415539
+      1    [4],      3    [4]   ;  -1    [4]      -1    [4]          0.0243559510
+      1    [4],      1    [2]   ;  -1    [2]      -1    [4]          0.0276551068
+      3    [4],      1    [2]   ;  -1    [2]      -1    [4]         -0.0198723801
+      1    [2],      1    [4]   ;  -1    [2]      -1    [4]          0.0504697234
+      1    [2],      3    [4]   ;  -1    [2]      -1    [4]         -0.0298298208
+  AA triplet amplitudes 
+
+  Double excitation coefficients
+      a  [irrep]     a  [irrep]     i  [irrep]     i  [irrep]  
+
+      1    [2],     13    [1]   ;  -2    [1]      -1    [2]          0.0078755085
+     13    [1],      1    [2]   ;  -2    [1]      -1    [2]         -0.0078755085
+      1    [2],      7    [1]   ;  -1    [3]      -1    [4]         -0.0079484707
+      1    [2],     13    [1]   ;  -1    [3]      -1    [4]         -0.0086010213
+      7    [1],      1    [2]   ;  -1    [3]      -1    [4]          0.0079484707
+     13    [1],      1    [2]   ;  -1    [3]      -1    [4]          0.0086010213
+      1    [4],      1    [2]   ;  -1    [2]      -1    [4]         -0.0228146166
+      3    [4],      1    [2]   ;  -1    [2]      -1    [4]          0.0099574407
+      1    [2],      1    [4]   ;  -1    [2]      -1    [4]          0.0228146166
+      1    [2],      3    [4]   ;  -1    [2]      -1    [4]         -0.0099574407
+
+  Time needed in solveccsd
+  cpu time:   0 h 54 min  0.84 sec;  real time:   0 h  0 min  0 sec  (100.0%)
+
+  ni, na =                    13                  437
+  Start with extrapolation procedure 
+  Define lists lg_.... following Datta
+  switch eta_val(2) to 1.5d0 
+  Ground state LSQ fit coefficients 
+  @det_fit_coef : w_min, w_max, squares_only exact_fit   1.0000000000000000E-002  0.41359910594078891      F F
+  @det_fit_coef: number of terms in fit                     3
+  @det_fit_coef: input weights 
+
+                 column   1       column   2       column   3       column   4
+ row   1      1.00000000000    0.41359911594    0.36260018703    0.29095638040
+
+                 column   5       column   6       column   7       column   8
+ row   1      0.23408889216    0.19745758410    0.14904437309    0.11478617067
+
+                 column   9       column  10       column  11       column  12
+ row   1      0.09061160671    0.06510240812    0.04686848899    0.03110818535
+
+                 column  13       column  14       column  15       column  16
+ row   1      0.02117261324    0.01595352931    0.01205934347    0.00823725051
+
+                 column  17       column  18       column  19       column  20
+ row   1      0.00466503468    0.00272636251    0.00153966361    0.00093495642
+
+                 column  21       column  22       column  23       column  24
+ row   1      0.00069066326    0.00051526678    0.00039227575    0.00026901411
+
+                 column  25       column  26       column  27
+ row   1      0.00014993243    0.00008134595    0.00000000000
+  @det_fit_coef: selected weights, i_last                    16
+  last discarded weight < input_weight  -0.40536185542652720     
+  number of different points, i_first, i_last                     6                   11                   16
+
+                 column   1       column   2       column   3       column   4
+ row   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+
+                 column   5       column   6       column   7       column   8
+ row   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+
+                 column   9       column  10       column  11       column  12
+ row   1      0.00000000000    0.00000000000    0.04686848899    0.03110818535
+
+                 column  13       column  14       column  15       column  16
+ row   1      0.02117261324    0.01595352931    0.01205934347    0.00823725051
+
+                 column  17       column  18       column  19       column  20
+ row   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+
+                 column  21       column  22       column  23       column  24
+ row   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+
+                 column  25       column  26       column  27
+ row   1      0.00000000000    0.00000000000    0.00000000000
+  @det_fit_coef: trimmed eigenvalues A^+ A 
+
+                 column   1       column   2       column   3
+ row   1      6.00305879861    0.00102757815    0.00000012566
+  @det_fit_coef final fit_coefficients
+
+                 column   1       column   2       column   3       column   4
+ row   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+
+                 column   5       column   6       column   7       column   8
+ row   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+
+                 column   9       column  10       column  11       column  12
+ row   1      0.00000000000    0.00000000000    0.39711061890   -0.86476365860
+
+                 column  13       column  14       column  15       column  16
+ row   1     -0.50296158321    0.04562717579    0.61582653540    1.30916091173
+
+                 column  17       column  18       column  19       column  20
+ row   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+
+                 column  21       column  22       column  23       column  24
+ row   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+
+                 column  25       column  26       column  27
+ row   1      0.00000000000    0.00000000000    0.00000000000
+  sum of fit coefficients    1.0000000000010736       -1.0735856648125264E-012
+  disc_weight a
+
+                 column   1       column   2       column   3       column   4
+ row   1      1.00000000000    0.41359911594    0.36260018703    0.29095638040
+
+                 column   5       column   6       column   7       column   8
+ row   1      0.23408889216    0.19745758410    0.14904437309    0.11478617067
+
+                 column   9       column  10       column  11       column  12
+ row   1      0.09061160671    0.06510240812    0.04686848899    0.03110818535
+
+                 column  13       column  14       column  15       column  16
+ row   1      0.02117261324    0.01595352931    0.01205934347    0.00823725051
+
+                 column  17       column  18       column  19       column  20
+ row   1      0.00466503468    0.00272636251    0.00153966361    0.00093495642
+
+                 column  21       column  22       column  23       column  24
+ row   1      0.00069066326    0.00051526678    0.00039227575    0.00026901411
+
+                 column  25       column  26       column  27
+ row   1      0.00014993243    0.00008134595    0.00000000000
+  @det_fit_coef : w_min, w_max, squares_only exact_fit   1.0000000000000000E-002  0.41359910594078891      T F
+  @det_fit_coef: number of terms in fit                     3
+  @det_fit_coef: input weights 
+
+                 column   1       column   2       column   3       column   4
+ row   1      1.00000000000    0.41359911594    0.36260018703    0.29095638040
+
+                 column   5       column   6       column   7       column   8
+ row   1      0.23408889216    0.19745758410    0.14904437309    0.11478617067
+
+                 column   9       column  10       column  11       column  12
+ row   1      0.09061160671    0.06510240812    0.04686848899    0.03110818535
+
+                 column  13       column  14       column  15       column  16
+ row   1      0.02117261324    0.01595352931    0.01205934347    0.00823725051
+
+                 column  17       column  18       column  19       column  20
+ row   1      0.00466503468    0.00272636251    0.00153966361    0.00093495642
+
+                 column  21       column  22       column  23       column  24
+ row   1      0.00069066326    0.00051526678    0.00039227575    0.00026901411
+
+                 column  25       column  26       column  27
+ row   1      0.00014993243    0.00008134595    0.00000000000
+  @det_fit_coef: selected weights, i_last                    16
+  last discarded weight < input_weight  -0.40536185542652720     
+  number of different points, i_first, i_last                     6                   11                   16
+
+                 column   1       column   2       column   3       column   4
+ row   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+
+                 column   5       column   6       column   7       column   8
+ row   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+
+                 column   9       column  10       column  11       column  12
+ row   1      0.00000000000    0.00000000000    0.04686848899    0.03110818535
+
+                 column  13       column  14       column  15       column  16
+ row   1      0.02117261324    0.01595352931    0.01205934347    0.00823725051
+
+                 column  17       column  18       column  19       column  20
+ row   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+
+                 column  21       column  22       column  23       column  24
+ row   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+
+                 column  25       column  26       column  27
+ row   1      0.00000000000    0.00000000000    0.00000000000
+  @det_fit_coef: trimmed eigenvalues A^+ A 
+
+                 column   1       column   2       column   3
+ row   1      6.00000277502    0.00000327827    0.00000000000
+  @det_fit_coef final fit_coefficients
+
+                 column   1       column   2       column   3       column   4
+ row   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+
+                 column   5       column   6       column   7       column   8
+ row   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+
+                 column   9       column  10       column  11       column  12
+ row   1      0.00000000000    0.00000000000   -0.14794844626    0.10699513069
+
+                 column  13       column  14       column  15       column  16
+ row   1      0.21475278801    0.25494912228    0.27757921651    0.29367218877
+
+                 column  17       column  18       column  19       column  20
+ row   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+
+                 column  21       column  22       column  23       column  24
+ row   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+
+                 column  25       column  26       column  27
+ row   1      0.00000000000    0.00000000000    0.00000000000
+  sum of fit coefficients   0.99999999999958722        4.1278092055563320E-013
+  done det_fit_coef 
+  disc_weight b
+
+                 column   1       column   2       column   3       column   4
+ row   1      1.00000000000    0.41359911594    0.36260018703    0.29095638040
+
+                 column   5       column   6       column   7       column   8
+ row   1      0.23408889216    0.19745758410    0.14904437309    0.11478617067
+
+                 column   9       column  10       column  11       column  12
+ row   1      0.09061160671    0.06510240812    0.04686848899    0.03110818535
+
+                 column  13       column  14       column  15       column  16
+ row   1      0.02117261324    0.01595352931    0.01205934347    0.00823725051
+
+                 column  17       column  18       column  19       column  20
+ row   1      0.00466503468    0.00272636251    0.00153966361    0.00093495642
+
+                 column  21       column  22       column  23       column  24
+ row   1      0.00069066326    0.00051526678    0.00039227575    0.00026901411
+
+                 column  25       column  26       column  27
+ row   1      0.00014993243    0.00008134595    0.00000000000
+  last extrapolation for GS                    16
+
+  @delfile , file                     6 , LIST6 will be deleted
+
+  disc_weight b
+
+                 column   1       column   2       column   3       column   4
+ row   1      1.00000000000    0.41359911594    0.36260018703    0.29095638040
+
+                 column   5       column   6       column   7       column   8
+ row   1      0.23408889216    0.19745758410    0.14904437309    0.11478617067
+
+                 column   9       column  10       column  11       column  12
+ row   1      0.09061160671    0.06510240812    0.04686848899    0.03110818535
+
+                 column  13       column  14       column  15       column  16
+ row   1      0.02117261324    0.01595352931    0.01205934347    0.00823725051
+
+                 column  17       column  18       column  19       column  20
+ row   1      0.00466503468    0.00272636251    0.00153966361    0.00093495642
+
+                 column  21       column  22       column  23       column  24
+ row   1      0.00069066326    0.00051526678    0.00039227575    0.00026901411
+
+                 column  25       column  26       column  27
+ row   1      0.00014993243    0.00008134595    0.00000000000
+  Ground state LSQ fit coefficients 
+  @det_fit_coef : w_min, w_max, squares_only exact_fit   1.0000000000000000E-002  0.41359910594078891      F F
+  @det_fit_coef: number of terms in fit                     3
+  @det_fit_coef: input weights 
+
+                 column   1       column   2       column   3       column   4
+ row   1      1.00000000000    0.41359911594    0.36260018703    0.29095638040
+
+                 column   5       column   6       column   7       column   8
+ row   1      0.23408889216    0.19745758410    0.14904437309    0.11478617067
+
+                 column   9       column  10       column  11       column  12
+ row   1      0.09061160671    0.06510240812    0.04686848899    0.03110818535
+
+                 column  13       column  14       column  15       column  16
+ row   1      0.02117261324    0.01595352931    0.01205934347    0.00823725051
+
+                 column  17       column  18       column  19       column  20
+ row   1      0.00466503468    0.00272636251    0.00153966361    0.00093495642
+
+                 column  21       column  22       column  23       column  24
+ row   1      0.00069066326    0.00051526678    0.00039227575    0.00026901411
+
+                 column  25       column  26       column  27
+ row   1      0.00014993243    0.00008134595    0.00000000000
+  @det_fit_coef: selected weights, i_last                    16
+  last discarded weight < input_weight  -0.40536185542652720     
+  number of different points, i_first, i_last                     6                   11                   16
+
+                 column   1       column   2       column   3       column   4
+ row   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+
+                 column   5       column   6       column   7       column   8
+ row   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+
+                 column   9       column  10       column  11       column  12
+ row   1      0.00000000000    0.00000000000    0.04686848899    0.03110818535
+
+                 column  13       column  14       column  15       column  16
+ row   1      0.02117261324    0.01595352931    0.01205934347    0.00823725051
+
+                 column  17       column  18       column  19       column  20
+ row   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+
+                 column  21       column  22       column  23       column  24
+ row   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+
+                 column  25       column  26       column  27
+ row   1      0.00000000000    0.00000000000    0.00000000000
+  @det_fit_coef: trimmed eigenvalues A^+ A 
+
+                 column   1       column   2       column   3
+ row   1      6.00305879861    0.00102757815    0.00000012566
+  @det_fit_coef final fit_coefficients
+
+                 column   1       column   2       column   3       column   4
+ row   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+
+                 column   5       column   6       column   7       column   8
+ row   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+
+                 column   9       column  10       column  11       column  12
+ row   1      0.00000000000    0.00000000000    0.39711061890   -0.86476365860
+
+                 column  13       column  14       column  15       column  16
+ row   1     -0.50296158321    0.04562717579    0.61582653540    1.30916091173
+
+                 column  17       column  18       column  19       column  20
+ row   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+
+                 column  21       column  22       column  23       column  24
+ row   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+
+                 column  25       column  26       column  27
+ row   1      0.00000000000    0.00000000000    0.00000000000
+  sum of fit coefficients    1.0000000000010736       -1.0735856648125264E-012
+  last extrapolation for GS                    16
+  @det_fit_coef : w_min, w_max, squares_only exact_fit   1.0000000000000000E-002  0.41359910594078891      T F
+  @det_fit_coef: number of terms in fit                     3
+  @det_fit_coef: input weights 
+
+                 column   1       column   2       column   3       column   4
+ row   1      1.00000000000    0.41359911594    0.36260018703    0.29095638040
+
+                 column   5       column   6       column   7       column   8
+ row   1      0.23408889216    0.19745758410    0.14904437309    0.11478617067
+
+                 column   9       column  10       column  11       column  12
+ row   1      0.09061160671    0.06510240812    0.04686848899    0.03110818535
+
+                 column  13       column  14       column  15       column  16
+ row   1      0.02117261324    0.01595352931    0.01205934347    0.00823725051
+
+                 column  17       column  18       column  19       column  20
+ row   1      0.00466503468    0.00272636251    0.00153966361    0.00093495642
+
+                 column  21       column  22       column  23       column  24
+ row   1      0.00069066326    0.00051526678    0.00039227575    0.00026901411
+
+                 column  25       column  26       column  27
+ row   1      0.00014993243    0.00008134595    0.00000000000
+  @det_fit_coef: selected weights, i_last                    16
+  last discarded weight < input_weight  -0.40536185542652720     
+  number of different points, i_first, i_last                     6                   11                   16
+
+                 column   1       column   2       column   3       column   4
+ row   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+
+                 column   5       column   6       column   7       column   8
+ row   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+
+                 column   9       column  10       column  11       column  12
+ row   1      0.00000000000    0.00000000000    0.04686848899    0.03110818535
+
+                 column  13       column  14       column  15       column  16
+ row   1      0.02117261324    0.01595352931    0.01205934347    0.00823725051
+
+                 column  17       column  18       column  19       column  20
+ row   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+
+                 column  21       column  22       column  23       column  24
+ row   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+
+                 column  25       column  26       column  27
+ row   1      0.00000000000    0.00000000000    0.00000000000
+  @det_fit_coef: trimmed eigenvalues A^+ A 
+
+                 column   1       column   2       column   3
+ row   1      6.00000277502    0.00000327827    0.00000000000
+  @det_fit_coef final fit_coefficients
+
+                 column   1       column   2       column   3       column   4
+ row   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+
+                 column   5       column   6       column   7       column   8
+ row   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+
+                 column   9       column  10       column  11       column  12
+ row   1      0.00000000000    0.00000000000   -0.14794844626    0.10699513069
+
+                 column  13       column  14       column  15       column  16
+ row   1      0.21475278801    0.25494912228    0.27757921651    0.29367218877
+
+                 column  17       column  18       column  19       column  20
+ row   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+
+                 column  21       column  22       column  23       column  24
+ row   1      0.00000000000    0.00000000000    0.00000000000    0.00000000000
+
+                 column  25       column  26       column  27
+ row   1      0.00000000000    0.00000000000    0.00000000000
+  sum of fit coefficients   0.99999999999958722        4.1278092055563320E-013
+  done det_fit_coef 
+
+     GS partial sums natural occupation numbers 
+     Full sum over occupied non's         3.7691602841
+     Full sum over virtual  non's         3.7691602841
+
+     k     eta_k      tau_k        n_o     weight(o)   disc-weight(o)   n_v     weight(v)   disc-weight(v)  disc-weight(t) 
+  --------------------------------------------------------------------------------- 
+
+     1     0.000    0.1000E+01      0      0.000000    0.100000E+01      0      0.000000    0.100000E+01      0.100000E+01
+     2     1.500    0.3162E-01     13      1.000000    0.000000E+00     35      0.586401    0.413599E+00      0.413599E+00
+     3     1.625    0.2371E-01     13      1.000000    0.000000E+00     42      0.637400    0.362600E+00      0.362600E+00
+     4     1.750    0.1778E-01     13      1.000000    0.000000E+00     55      0.709044    0.290956E+00      0.290956E+00
+     5     1.875    0.1334E-01     13      1.000000    0.000000E+00     69      0.765911    0.234089E+00      0.234089E+00
+     6     2.000    0.1000E-01     13      1.000000    0.000000E+00     81      0.802542    0.197458E+00      0.197458E+00
+     7     2.125    0.7499E-02     13      1.000000    0.000000E+00    102      0.850956    0.149044E+00      0.149044E+00
+     8     2.250    0.5623E-02     13      1.000000    0.000000E+00    122      0.885214    0.114786E+00      0.114786E+00
+     9     2.375    0.4217E-02     13      1.000000    0.000000E+00    141      0.909388    0.906116E-01      0.906116E-01
+    10     2.500    0.3162E-02     13      1.000000    0.000000E+00    167      0.934898    0.651024E-01      0.651024E-01
+    11     2.625    0.2371E-02     13      1.000000    0.000000E+00    192      0.953132    0.468685E-01      0.468685E-01
+    12     2.750    0.1778E-02     13      1.000000    0.000000E+00    221      0.968892    0.311082E-01      0.311082E-01
+    13     2.875    0.1334E-02     13      1.000000    0.000000E+00    245      0.978827    0.211726E-01      0.211726E-01
+    14     3.000    0.1000E-02     13      1.000000    0.000000E+00    262      0.984046    0.159535E-01      0.159535E-01
+    15     3.125    0.7499E-03     13      1.000000    0.000000E+00    279      0.987941    0.120593E-01      0.120593E-01
+    16     3.250    0.5623E-03     13      1.000000    0.000000E+00    301      0.991763    0.823725E-02      0.823725E-02
+    17     3.375    0.4217E-03     13      1.000000    0.000000E+00    329      0.995335    0.466503E-02      0.466503E-02
+    18     3.500    0.3162E-03     13      1.000000    0.000000E+00    349      0.997274    0.272636E-02      0.272636E-02
+    19     3.625    0.2371E-03     13      1.000000    0.000000E+00    365      0.998460    0.153966E-02      0.153966E-02
+    20     3.750    0.1778E-03     13      1.000000    0.000000E+00    376      0.999065    0.934956E-03      0.934956E-03
+    21     3.875    0.1334E-03     13      1.000000    0.000000E+00    382      0.999309    0.690663E-03      0.690663E-03
+    22     4.000    0.1000E-03     13      1.000000    0.000000E+00    388      0.999485    0.515267E-03      0.515267E-03
+    23     4.125    0.7499E-04     13      1.000000    0.000000E+00    393      0.999608    0.392276E-03      0.392276E-03
+    24     4.250    0.5623E-04     13      1.000000    0.000000E+00    400      0.999731    0.269014E-03      0.269014E-03
+    25     4.375    0.4217E-04     13      1.000000    0.000000E+00    409      0.999850    0.149932E-03      0.149932E-03
+    26     4.500    0.3162E-04     13      1.000000    0.000000E+00    416      0.999919    0.813459E-04      0.813459E-04
+    27    12.000    0.1000E-11     13      1.000000    0.000000E+00    437      1.000000    0.000000E+00      0.000000E+00
+
+  Values used in extrapolation                    16
+    16     3.250    0.5623E-03     13      1.000000    0.000000E+00    301      0.991763    0.823725E-02      0.823725E-02
+
+  --------------------------------------------------------------------------------- 
+     Truncated GS correlation energies 
+     k     eta_k      tau_k                 E_corr(T1)          E_corr(T2)          E_corr 
+  ------------------------------------------------------------------------
+
+     1     0.000   0.100000E+01           0.0003098119       -0.8562706956       -0.8559608837
+     2     1.500   0.316228E-01           0.0002701931       -0.8751002159       -0.8748300227
+     3     1.625   0.237137E-01           0.0002905046       -0.8776715357       -0.8773810311
+     4     1.750   0.177828E-01           0.0002831310       -0.8804892954       -0.8802061644
+     5     1.875   0.133352E-01           0.0002825706       -0.8829836231       -0.8827010525
+     6     2.000   0.100000E-01           0.0002828336       -0.8839743029       -0.8836914692
+     7     2.125   0.749894E-02           0.0002826626       -0.8846868926       -0.8844042300
+     8     2.250   0.562341E-02           0.0002827520       -0.8837989196       -0.8835161676
+     9     2.375   0.421697E-02           0.0002815227       -0.8828651127       -0.8825835900
+    10     2.500   0.316228E-02           0.0002816565       -0.8817721618       -0.8814905053
+    11     2.625   0.237137E-02           0.0002812703       -0.8809656219       -0.8806843516
+    12     2.750   0.177828E-02           0.0002818855       -0.8802339968       -0.8799521113
+    13     2.875   0.133352E-02           0.0002820502       -0.8796063367       -0.8793242864
+    14     3.000   0.100000E-02           0.0002821097       -0.8792589413       -0.8789768316
+    15     3.125   0.749894E-03           0.0002816961       -0.8789150922       -0.8786333962
+    16     3.250   0.562341E-03           0.0002816104       -0.8785953583       -0.8783137479
+    17     3.375   0.421697E-03           0.0002814948       -0.8782472397       -0.8779657449
+    18     3.500   0.316228E-03           0.0002815730       -0.8780202854       -0.8777387124
+    19     3.625   0.237137E-03           0.0002814827       -0.8778674688       -0.8775859861
+    20     3.750   0.177828E-03           0.0002814879       -0.8777676738       -0.8774861859
+    21     3.875   0.133352E-03           0.0002814561       -0.8777230031       -0.8774415470
+    22     4.000   0.100000E-03           0.0002814438       -0.8776933941       -0.8774119504
+    23     4.125   0.749894E-04           0.0002814438       -0.8776748056       -0.8773933618
+    24     4.250   0.562341E-04           0.0002814234       -0.8776544095       -0.8773729862
+    25     4.375   0.421697E-04           0.0002814182       -0.8776269158       -0.8773454976
+    26     4.500   0.316228E-04           0.0002814057       -0.8776096554       -0.8773282497
+    27    12.000   0.100000E-11           0.0002813594       -0.8775900511       -0.8773086917
+
+    LAST CCSD                             0.0002816104       -0.8785953583       -0.8783137479
+    extrapolated (linear)                 0.0002810918       -0.8778382749       -0.8775571831
+    extrapolated (quadratic)              0.0002819357       -0.8788950496       -0.8786131140
+    Full CCSD                             0.0002813594       -0.8775900511       -0.8773086917
+
+  ------------------------------------------------------------------------
+  Exit MRCC after xp_main 
+  @exitmrcc, check status 
+  BRUKTEST value                     1
+  BCC_ITER value                     1
+  BRUKITER value                     0
+ @exitmrcc: os_ccsd, doip, doea do_gcc F F F F
+
+  @delfile , file                     5 , DERGAM will be deleted
+
+
+  @delfile , file                     4 , DERINT will be deleted
+
+
+  @delfile , file                     6 , LIST6 will be deleted
+
+
+  @delfile , file                     7 , LIST7 will be deleted
+
+  exitmrcc: totenerg   -193.74613566385543     
+  exitmrcc: totener2    0.0000000000000000     
+ Version of ACES2, from 270 onwards    270
+  Use version 2.7+ of Aces2 
+  switch back meaning of iflags2(138) 
+  Restore original value iflag2(138)                    0                    0
+  @CHECKOUT-I, Total execution time :    6047.7900 seconds.
+
+              ****************************************************
+              * ACES : Advanced Concepts in Electronic Structure *
+              *                    Ver. 2.8.0                    *
+              ****************************************************
+
+                             Quantum Theory Project
+                             University of Florida
+                             Gainesville, FL  32611
+ @ACES2: Executing "rm -f FILES"
+ @ACES2: Executing "xjoda"
+  @aces2.main: enter mrcc_branch 
+  Entered mrcc_branch 
+  geom_opt :  F
+  vib_specs:  F
+
+  @mrcc_branch: enter energy_4mrcc T
+ @ACES2: Executing "xvmol"
+ @ACES2: Executing "xvmol2ja"
+ @ACES2: Executing "xvprops"
+ @ACES2: Executing "xvscf"
+  skip xab_ovlps 
+ @ACES2: Executing "xvtran"
+ @ACES2: Executing "xintprc"
+ @ACES2: Executing "xmrcc"
+
+
+ @ACES2: The ACES2 program has completed successfully in                 46612  seconds.
+
+
